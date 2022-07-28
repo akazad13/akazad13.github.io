@@ -1,0 +1,89 @@
+#header .nav li ul li:hover a,
+#header .nav li ul li:hover i,
+#header .social-icon li a,
+#header.sticky .nav li.active a i,
+#header.sticky .nav li:hover a i,
+#header.normal .nav li.active a i,
+#header.normal .nav li:hover a i,
+#personal-area .personal-text h2 span,
+#personal-area.slider .personal-text h2,
+#portfolio .portfolio-hover span,
+#about-me .single-table .table-list .fa,
+#testimonials .rating li i,
+#testimonials .owl-nav div,
+#contact .single-address i,
+#footer-top .newslatter h2 span,
+#footer-top .news-form  button:hover,
+#footer .social li a:hover,
+.section-title h1 span
+#header.sidenav .nav li.active a,
+#header.sidenav .nav li:hover a,
+#header .slicknav_nav a:hover,
+#header .slicknav_nav a:focus,
+#header .slicknav_nav a:active,
+#header.sticky .slicknav_nav a:hover,
+#header.normal .slicknav_nav a:hover{
+	color:#F2784B;
+}
+#header .nav li a::before,
+#personal-area .personal-text .btn:hover,
+#personal-area .personal-text .btn.primary,
+#personal-area.particle .arrow a,
+#personal-area.slider  .owl-dot.active span,
+#personal-area.slider  .owl-dot span:hover,
+#my-service .single-service:hover,
+#my-service .single-service.active,
+#my-service .single-service:before,
+#portfolio .portfolio-single .btn,
+#portfolio .portfolio-hover .button a:hover,
+#portfolio .portfolio-hover .button .primary,
+#portfolio .button .btn,
+#countdown .single-count i,
+#my-timeline .timeline-inner:before,
+#my-timeline .single-timeline .date,
+#my-timeline .single-timeline h2::before,
+#contact .form-group .button,
+#contact .single-address:hover i,
+#footer-top .news-form  button,
+#footer .arrow a,
+.section-title h1::before,
+.section-title h1 i,
+#breadcrumbs .bread-list,
+#header .side-icon a,
+#header .social,
+#header.sticky .slicknav_btn,
+#call-action::before,
+.k-line,
+#about-me .row .btn:hover,
+#portfolio .row .btn:hover{
+	background: #F2784B;
+}
+#header .nav li a::after,
+#portfolio .portfolio-nav ul li span::before,
+#clients.section{
+	border-top-color:#F2784B;
+}
+#blog .blog-head{
+	border-bottom-color:#F2784B
+}
+#countdown .single-count:hover i:after,
+#countdown .single-count.active i:after,
+#blog .owl-dot span::before,
+#blog.single blockquote,
+#contact .form-group input:hover,
+#contact .form-group input:focus,
+#contact .form-group textarea:hover{
+	border-color:#F2784B;
+}
+#about-me .row .btn {
+	background-color: #fff;
+	border: 3px solid #F2784B;
+	color: #000;
+	margin-top: 5px;
+}
+#about-me .row .btn:hover .fa, #about-me .row .btn:hover{
+	color: #fff;
+}
+#portfolio .row .btn:hover .fa, #portfolio .row .btn:hover{
+	color: #fff;
+}
