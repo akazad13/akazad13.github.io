@@ -242,7 +242,7 @@
 }
 
 #personal-area {
-	background-image: url('images/personal/personal-bg.jpg') !important ;
+	background-image: url('https://res.cloudinary.com/akazad13/image/upload/v1708750113/github/portfolio/personal-bg_plznyq.jpg') !important ;
 	height: 680px;
 	background-size: 37em;
 	position: relative;
