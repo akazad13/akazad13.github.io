@@ -1,0 +1,202 @@
+---
+import Container from "./Container.astro";
+import { Icon } from "astro-icon/components";
+---
+
+<div id="timeline" class="text-gray-600 dark:text-gray-300">
+    <Container>
+        <div class="mb-10 space-y-4 px-6 md:px-0">
+            <h2 class="text-center text-2xl font-bold text-gray-50 md:text-4xl">My Story</h2>
+        </div>
+
+        <div class="container mx-auto h-full w-full">
+            <div class="wrap relative h-full overflow-hidden p-10">
+                <div class="border-2-2 absolute h-full border border-gray-700 border-opacity-20" style="left: 50%"></div>
+                <!-- left timeline -->
+                <div class="left-timeline mb-3 flex w-full flex-row-reverse items-center justify-between">
+                    <div class="order-1 w-5/12"></div>
+                    <div class="z-20 order-1 flex h-8 items-center rounded-full bg-gray-800 shadow-xl">
+                        <div class="5 ml-auto flex items-center gap-0 p-5">
+                            <Icon name="mdi:calendar-month-outline" />
+                            <h1 class="mx-auto ps-2 text-lg font-semibold text-gray-50">Apr'14</h1>
+                        </div>
+                    </div>
+                    <div class="order-1 w-5/12 rounded-lg bg-indigo-400 px-6 py-4 shadow-xl">
+                        <h3 class="mb-3 text-xl font-bold text-gray-50">Join University</h3>
+                        <p class="text-sm leading-snug tracking-wide text-gray-50 text-opacity-100">
+                            On April 2014, I began my university journey as a student of Computer Science and Engineering (CSE) in Rajshahi University Of Engineering and Technology
+                            (RUET), Bangladesh.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- right timeline -->
+                <div class="right-timeline mb-3 flex w-full items-center justify-between">
+                    <div class="order-1 w-5/12"></div>
+                    <div class="z-20 order-1 flex h-8 items-center rounded-full bg-gray-800 shadow-xl">
+                        <div class="5 ml-auto flex items-center gap-0 p-5">
+                            <Icon name="mdi:calendar-month-outline" />
+                            <h1 class="mx-auto ps-2 text-lg font-semibold text-gray-50">Jun'14</h1>
+                        </div>
+                    </div>
+                    <div class="order-1 w-5/12 rounded-lg bg-red-400 px-6 py-4 shadow-xl">
+                        <h3 class="mb-3 text-xl font-bold text-gray-50">Start Competitive programming</h3>
+                        <p class="text-sm font-medium leading-snug tracking-wide text-gray-50 text-opacity-100">
+                            From Jun 2014, i have entered the world of competitive programming and since then, been solving problems in different online judges and attending
+                            programming contests like ICPC, NCPC, IUPC.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- left timeline -->
+                <div class="left-timeline mb-3 flex w-full flex-row-reverse items-center justify-between">
+                    <div class="order-1 w-5/12"></div>
+                    <div class="z-20 order-1 flex h-8 items-center rounded-full bg-gray-800 shadow-xl">
+                        <div class="5 ml-auto flex items-center gap-0 p-5">
+                            <Icon name="mdi:calendar-month-outline" />
+                            <h1 class="mx-auto ps-2 text-lg font-semibold text-gray-50">Nov'18</h1>
+                        </div>
+                    </div>
+                    <div class="order-1 w-5/12 rounded-lg bg-indigo-400 px-6 py-4 shadow-xl">
+                        <h3 class="mb-3 text-xl font-bold text-gray-50">Complete Graduations</h3>
+                        <p class="text-sm leading-snug tracking-wide text-gray-50 text-opacity-100">
+                            On November 2018, I have completed my graduations securing 6th place with CGPA 3.84 out of 4.00.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- right timeline -->
+                <div class="right-timeline mb-3 flex w-full items-center justify-between">
+                    <div class="order-1 w-5/12"></div>
+                    <div class="z-20 order-1 flex h-8 items-center rounded-full bg-gray-800 shadow-xl">
+                        <div class="5 ml-auto flex items-center gap-0 p-5">
+                            <!-- <img src="images/calendar.svg" color="currentColor" /> -->
+                            <Icon name="mdi:calendar-month-outline" />
+                            <h1 class="mx-auto ps-2 text-lg font-semibold text-gray-50">Dec'18</h1>
+                        </div>
+                    </div>
+                    <div class="order-1 w-5/12 rounded-lg bg-red-400 px-6 py-4 shadow-xl">
+                        <h3 class="mb-3 text-xl font-bold text-gray-50">Join Company</h3>
+                        <p class="text-sm font-medium leading-snug tracking-wide text-gray-50 text-opacity-100">
+                            After BSC graduations, from December 2018, I have been with Enosis Solutions as a Software Engineer (full time) till current day.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- left timeline -->
+                <div class="left-timeline mb-3 flex w-full flex-row-reverse items-center justify-between">
+                    <div class="order-1 w-5/12"></div>
+                    <div class="z-20 order-1 flex h-8 items-center rounded-full bg-gray-800 shadow-xl">
+                        <div class="5 ml-auto flex items-center gap-0 p-5">
+                            <Icon name="mdi:calendar-month-outline" />
+                            <h1 class="mx-auto ps-2 text-lg font-semibold text-gray-50">May'19</h1>
+                        </div>
+                    </div>
+                    <div class="order-1 w-5/12 rounded-lg bg-indigo-400 px-6 py-4 shadow-xl">
+                        <h3 class="mb-3 text-xl font-bold text-gray-50">Start Post Graduations</h3>
+                        <p class="text-sm leading-snug tracking-wide text-gray-50 text-opacity-100">
+                            From May 2019, started my post graduations (CSE) as a part time student in Bangladesh University of Engineering & Technology (BUET).
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="grid sm:grid-cols-2 lg:grid-cols-3">
+            <div class="">
+                <div class="relative my-6 flex w-96 flex-col rounded-lg border border-slate-200 bg-white shadow-sm">
+                    <div class="p-4">
+                        <div class="mb-2 flex items-center">
+                            <h6 class="text-xl font-semibold text-slate-800">Join University</h6>
+
+                            <div class="5 ml-auto flex items-center gap-0">
+                                <Icon name="mdi:calendar-month-outline" />
+                                <span class="ml-1.5 text-slate-600">April, 2014</span>
+                            </div>
+                        </div>
+
+                        <p class="leading-normal text-slate-600">
+                            On April 2014, I began my university journey as a student of Computer Science and Engineering (CSE) in Rajshahi University Of Engineering and Technology
+                            (RUET), Bangladesh.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="">
+                <div class="relative my-6 flex w-96 flex-col rounded-lg border border-slate-200 bg-white shadow-sm">
+                    <div class="p-4">
+                        <div class="mb-2 flex items-center">
+                            <h6 class="text-xl font-semibold text-slate-800">Start Competitive programming</h6>
+
+                            <div class="5 ml-auto flex items-center gap-0">
+                                <Icon name="mdi:calendar-month-outline" />
+                                <span class="ml-1.5 text-slate-600">Jun, 2014</span>
+                            </div>
+                        </div>
+
+                        <p class="leading-normal text-slate-600">
+                            From Jun 2014, i have entered the world of competitive programming and since then, been solving problems in different online judges and attending
+                            programming contests like ICPC, NCPC, IUPC.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="">
+                <div class="relative my-6 flex w-96 flex-col rounded-lg border border-slate-200 bg-white shadow-sm">
+                    <div class="p-4">
+                        <div class="mb-2 flex items-center">
+                            <h6 class="text-xl font-semibold text-slate-800">Complete Graduations</h6>
+
+                            <div class="5 ml-auto flex items-center gap-0">
+                                <Icon name="mdi:calendar-month-outline" />
+                                <span class="ml-1.5 text-slate-600">November, 2018</span>
+                            </div>
+                        </div>
+
+                        <p class="leading-normal text-slate-600">On November 2018, I have completed my graduations securing 6th place with CGPA 3.84 out of 4.00.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="">
+                <div class="relative my-6 flex w-96 flex-col rounded-lg border border-slate-200 bg-white shadow-sm">
+                    <div class="p-4">
+                        <div class="mb-2 flex items-center">
+                            <h6 class="text-xl font-semibold text-slate-800">Join Company</h6>
+
+                            <div class="5 ml-auto flex items-center gap-0">
+                                <Icon name="mdi:calendar-month-outline" />
+                                <span class="ml-1.5 text-slate-600">December, 2018</span>
+                            </div>
+                        </div>
+
+                        <p class="leading-normal text-slate-600">
+                            After BSC graduations, from December 2018, I have been with Enosis Solutions as a Software Engineer (full time) till current day.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="">
+                <div class="relative my-6 flex w-96 flex-col rounded-lg border border-slate-200 bg-white shadow-sm">
+                    <div class="p-4">
+                        <div class="mb-2 flex items-center">
+                            <h6 class="text-xl font-semibold text-slate-800">Start Post Graduations</h6>
+
+                            <div class="5 ml-auto flex items-center gap-0">
+                                <Icon name="mdi:calendar-month-outline" />
+                                <span class="ml-1.5 text-slate-600">May, 2019</span>
+                            </div>
+                        </div>
+
+                        <p class="leading-normal text-slate-600">
+                            From May 2019, started my post graduations (CSE) as a part time student in Bangladesh University of Engineering & Technology (BUET).
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    </Container>
+</div>
