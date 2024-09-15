@@ -127,4 +127,7 @@ CGPA: 3.84 out of 4.00 (6th place)
     table td {
         padding: 5px 10px;
     }
+    #topbar-wrapper + div {
+        font-size: 1.05rem;
+    }
 </style>
