@@ -97,7 +97,7 @@ theme_mode: # [light | dark]
 cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar: assets/img/cartoon_face.jpg
+avatar: https://res.cloudinary.com/akazad13/image/upload/v1726420763/cartoon_face_hruabn.jpg
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
@@ -146,7 +146,7 @@ pwa:
     deny_paths:
       # - "/example"  # URLs match `<SITE_URL>/example/*` will not be cached by the PWA
 
-paginate: 2
+paginate: 6
 paginate_path: "/blog/page:num/"
 
 # The base URL of your site

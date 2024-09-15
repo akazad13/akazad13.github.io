@@ -6,7 +6,7 @@ order: 7
 permalink: /
 layout: home
 ---
-![Md Abul Kalam](assets/img/Md_Abul_Kalam.jpeg){: width="195" .left}
+![Md Abul Kalam](https://res.cloudinary.com/akazad13/image/upload/v1726420697/Md_Abul_Kalam_uujgxs.png){: width="195" .left}
 # Md Abul Kalam 
 ### Software Technical Lead {#designation}
 <p class="margin-bottom-05"><i class="fa-solid fa-location-dot margin-right-5"></i> Enosis Solutions, Dhaka, Bangladesh <i class="fa-solid fa-phone margin-right-5 margin-left-10"></i> +8801686871012</p>
