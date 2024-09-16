@@ -21,5 +21,5 @@ order: 2
 | You Know Who?!!!!!!       | RUET জ্ঞানJam 2018            | Matrix Exponential, Math            | 3/5          |
 | Boro vai ... trt chai..!! | Coding Contest 21, DevSkill | Math, Number Theory                 | 59/221       |
 | Friendly game             | -                           | Basic Math                          | 57/130       |
-| Special Trt               | Comming Soon                | Number Theory, Moduler Arithmetic   | -            |
+| Special Trt               | Comming Soon                | Number Theory, Modular Arithmetic   | -            |
 | Lord of the Rings         | Comming Soon                | Graph Theory                        | -            |
