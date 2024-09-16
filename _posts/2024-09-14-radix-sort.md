@@ -7,16 +7,19 @@ date: 2024-09-14 17:58:00 +0600
 categories: [Algorithm, Sorting]
 tags: [sorting, radix-sort]
 ---
+
+## Introduction
+
 Radix Sort is a linear sorting algorithm that sorts elements by processing them digit by digit. It is an efficient sorting algorithm for integers or strings with fixed-size keys. 
 
 Instead of comparing elements directly, Radix Sort distributes the elements into buckets based on the value of each digit. By repeatedly sorting the elements by their digits, starting from the least significant to the most significant, Radix Sort achieves the final sorted order.
 
 The key idea behind Radix Sort is to leverage the concept of place value. It assumes that sorting numbers digit by digit will eventually yield a fully sorted list. Radix Sort can be implemented using different approaches, such as Least Significant Digit (LSD) Radix Sort or Most Significant Digit (MSD) Radix Sort.
 
-### Example
+## Example
 
 
-### Code
+## Code
 
 ```cpp
 #include <iostream>
@@ -117,9 +120,9 @@ int main()
 
 ```
 
-### Complexity Analysis:
+## Complexity Analysis
 
-##### Time Complexity:
+### Time Complexity
 
 `O(d*(n+b))`, where `d` is the number of digits, `n` is the number of elements, and `b` is the base of the number system being used.
 
@@ -127,10 +130,11 @@ int main()
 - **Average Case**: `θ(d*(n+b))`.
 - **Worst Case**: `O(d*(n+b))`.
 
-##### Space Complexity:
+### Space Complexity
+
 - `O(n+b)`, where `n` is the number of elements and `b` is the base of the number system.
 
 
-### Use cases
+## Use cases
 - When values are in the range from `1` to `n^2`.
 

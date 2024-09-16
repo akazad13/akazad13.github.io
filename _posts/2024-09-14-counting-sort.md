@@ -7,9 +7,12 @@ date: 2024-09-14 13:43:24 +0600
 categories: [Algorithm, Sorting]
 tags: [sorting, counting-sort]
 ---
+
+## Introduction
+
 Counting Sort is a non-comparison-based sorting algorithm that is effective when the range of input values is limited. It performs particularly well when the range of input values is small relative to the number of elements to be sorted. The core concept of Counting Sort is to count the frequency of each distinct element in the input array and use this information to place the elements in their correct sorted positions.
 
-### Algorithm
+## Algorithm
 
 - Declare an auxiliary array `count` array of size `max(nums[])+1` and initialize it with `0`.
 - Traverse array `nums` array and map each element of `nums` as an index of `count` array, i.e., execute `count[nums[i]]++` for `0 <= i < n`.
@@ -17,10 +20,10 @@ Counting Sort is a non-comparison-based sorting algorithm that is effective when
 - Create an array `sortedNums` of size `n`.
 - Traverse array `nums` and update `sortedNums[count[nums[i]] - 1] = nums[i]`. Also, update `count[nums[i]] = count[nums[i]] - 1` .
 
-### Example
+## Example
 
 
-### Code
+## Code
 
 ```cpp
 #include <iostream>
@@ -96,9 +99,9 @@ int main()
 
 ```
 
-### Complexity Analysis
+## Complexity Analysis
 
-#### Time Complexity
+### Time Complexity
 
 `O(n+m)`, where n and m are the size of `nums[]` and `count[]` respectively.
 
@@ -106,17 +109,17 @@ int main()
 - **Average Case**: `θ(n+m)`.
 - **Worst Case**: `O(n+m)`.
 
-#### Space Complexity
+### Space Complexity
 - `O(n+m)`, where n and m are the size of `nums[]` and `count[]` respectively.
 
 
-### Advantages of Couting Sort
+## Advantages of Couting Sort
 
 - Counting sort generally performs faster than all comparison-based sorting algorithms, such as merge sort and quicksort, if the range of input is of the order of the number of input.
 - Counting sort is easy to code.
 - Counting sort is a stable algorithm.
 
-### Disadvantages of Couting Sort
+## Disadvantages of Couting Sort
 
 - Counting sort doesn’t work on decimal values.
 - Counting sort is inefficient if the range of values to be sorted is very large.

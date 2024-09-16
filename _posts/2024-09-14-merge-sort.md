@@ -7,11 +7,16 @@ date: 2024-09-14 13:43:24 +0600
 categories: [Algorithm, Sorting]
 tags: [sorting, merge-sort, divide and conquer]
 ---
+
+## Introduction
+
 Merge sort is a sorting algorithm that follows the divide-and-conquer approach. It works by recursively dividing the input array into smaller subarrays and sorting those subarrays, then merging them back together to obtain the sorted array.
 
 So, the process of merge sort is to divide the array into two halves, sort each half, and then merge the sorted halves back together. This process is repeated until the entire array is sorted.
 
-#### Here’s a step-by-step explanation of how merge sort works:
+## Algorithm
+
+Here’s a step-by-step explanation of how merge sort works:
 
 1. Divide: Recursively split the list or array into two halves until they cannot be divided further.
 
@@ -19,7 +24,7 @@ So, the process of merge sort is to divide the array into two halves, sort each 
 
 3. Merge: Combine the sorted subarrays back together in order. Continue this process until all elements from both subarrays are merged.
 
-### Example
+## Example
 
     Input:  48 38 27 43 10 30
     Output: 10 27 30 38 43 48
@@ -42,7 +47,7 @@ So, the process of merge sort is to divide the array into two halves, sort each 
 
 ![9](https://github.com/user-attachments/assets/b07a5034-11b5-4d6a-b9e3-048919bf0e6b)
 
-### Code
+## Code
 
 ```cpp
 #include <iostream>
@@ -156,24 +161,24 @@ int main()
 
 ```
 
-### Complexity Analysis:
+## Complexity Analysis
 
-##### Time Complexity:
+### Time Complexity
 
 - **Best Case**: `Ω(nlogn)`, When the array is already sorted or nearly sorted.
 - **Average Case**: `θ(nlogn)`, When the array is randomly ordered.
 - **Worst Case**: `O(nlogn)`, When the array is sorted in reverse order.
 
-##### Space Complexity:
+### Space Complexity
 - `O(n)`, Additional space is required for the temporary array used during merging.
 
-### Advantages of Merge Sort:
+## Advantages of Merge Sort
 
 - Stability: Merge sort is a stable sorting algorithm, meaning it preserves the relative order of equal elements in the input array.
 - Guaranteed Worst-Case Performance: Merge sort has a worst-case time complexity of `O(nlogn)`, ensuring good performance even on large datasets.
 - Simple to Implement: The divide-and-conquer approach used in merge sort is straightforward and easy to implement.
 
-### Disadvantages of Merge Sort:
+## Disadvantages of Merge Sort
 
 - Space Complexity: Merge sort requires additional memory to store the merged sub-arrays during the sorting process.
 - Not In-Place: Merge sort is not an in-place sorting algorithm, meaning it needs extra memory to store the sorted data. This can be a disadvantage in applications where memory usage is a concern.
