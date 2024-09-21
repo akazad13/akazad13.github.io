@@ -11,8 +11,8 @@ layout: home
 ### Software Technical Lead {#designation}
 <p class="margin-bottom-05"><i class="fa-solid fa-location-dot margin-right-5"></i> Enosis Solutions, Dhaka, Bangladesh <i class="fa-solid fa-phone margin-right-5 margin-left-10"></i> +8801686871012</p>
 
-<a href="#" target="_blank"> <i class="fa-regular fa-address-card margin-left-10" id="resume"></i> </a>
-<a href="#"> <i class="fas fa-graduation-cap margin-left-10"></i></a>
+<a href="https://drive.google.com/file/d/19fOzBWa9IdoqkswbJ-ZqFmOAQmQt0M71/view?usp=sharing" target="_blank"> <i class="fa-regular fa-address-card margin-left-10" id="resume"></i> </a>
+<a href="/programming"> <i class="fas fa-code margin-left-10"></i></a>
 <a href="https://github.com/akazad13" target="_blank"> <i class="fa-brands fa-github margin-left-10"></i> </a>
 <a href="https://www.linkedin.com/in/akazadcse13" target="_blank"> <i class="fa-brands fa-linkedin-in margin-left-10"></i> </a>
 
