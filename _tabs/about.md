@@ -18,7 +18,7 @@ layout: home
 
 ---
 
-Hi, I am Kalam, a dynamic software engineering professional with over 5 years of experience in designing,developing, and maintaining large-scale web and API-based systems. Seeking a challenging role where I can leverage my analytical skills, competitive programming experience, and leadership abilities to drive innovative solutions and contribute to the success 
+Hi, I am Kalam, a dynamic software engineering professional with over 5 years of experience in designing, developing, and maintaining large-scale web and API-based systems. Seeking a challenging role where I can leverage my analytical skills, competitive programming experience, and leadership abilities to drive innovative solutions and contribute to the success 
 of the company.
 
 ### <i class="fa-solid fa-briefcase margin-right-5"></i> Work Experience
