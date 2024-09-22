@@ -11,7 +11,7 @@ layout: home
 ### Software Technical Lead {#designation}
 <p class="margin-bottom-05"><i class="fa-solid fa-location-dot margin-right-5"></i> Enosis Solutions, Dhaka, Bangladesh <i class="fa-solid fa-phone margin-right-5 margin-left-10"></i> +8801686871012</p>
 
-<a href="https://drive.google.com/file/d/19fOzBWa9IdoqkswbJ-ZqFmOAQmQt0M71/view?usp=sharing" target="_blank"> <i class="fa-regular fa-address-card margin-left-10" id="resume"></i> </a>
+<a href="https://drive.google.com/file/d/1MBc6tZS7HsVYCxfV4n-hS0vSRzgIQOnk/view?usp=sharing" target="_blank"> <i class="fa-regular fa-address-card margin-left-10" id="resume"></i> </a>
 <a href="/programming"> <i class="fas fa-code margin-left-10"></i></a>
 <a href="https://github.com/akazad13" target="_blank"> <i class="fa-brands fa-github margin-left-10"></i> </a>
 <a href="https://www.linkedin.com/in/akazadcse13" target="_blank"> <i class="fa-brands fa-linkedin-in margin-left-10"></i> </a>
@@ -29,9 +29,8 @@ of the company.
 <br>
 Enosis Solutions
 
-- Leading two teams comprising 6 and 2 developers, providing guidance, reviewing code
-changes, and facilitating decision-making processes to enhance productivity and
-efficiency.
+- Leading two teams comprising 8 developers, conducting requirements analysis & task estimation, implementing solutions, providing guidance,
+reviewing code changes, and facilitating decision-making processes to enhance productivity and efficiency.
 - Collaborating with other team members in migrating large projects from on-premise to
 Azure Cloud, optimizing system performance and scalability.
 - Mentoring and training junior engineers and interns, fostering their professional growth
@@ -79,12 +78,12 @@ review and signing processes.
 
 ### <i class="fa-solid fa-gears margin-right-5"></i> Technical Skills
 
-| Language                |  C, C++, C#, JavaScript, TypeScript, Visual Basic, jQuery, HTML, CSS.         |
-| Frameworks & Libraries  |  ASP.NET MVC, ASP.NET Core, Entity Framework Core, Angular, SignalR, Unlayer. |
-| Databases               |  MS SQL Server, T-SQL, Store Procedures, MySQL, NOSQL.                        |
-| Cloud Services          |  Azure & AWS cloud services, Basic CI/CD pipeline, Twilio.                    |
-| Tools                   |  Visual Studio, VS Code, Git, Sourcetree.                                     |
-| Others                  |  Agile Methodology, Jira board.                                               |
+| Language                |  C, C++, C#, JavaScript, TypeScript, Visual Basic, jQuery, HTML, CSS.                                  |
+| Frameworks & Libraries  |  ASP.NET MVC, ASP.NET Core, Entity Framework Core, Angular, PowerBI, SignalR, Unlayer.                 |
+| Databases               |  MS SQL Server, T-SQL, Store Procedures, MySQL, NOSQL, Azure CosmosDB, Synapse DB.                     |
+| Cloud Services          |  Azure & AWS cloud services, Basic CI/CD pipeline, Azure Data Factory, Azure Synapse Analysis, Twilio. |
+| Tools                   |  Visual Studio, VS Code, Power BI Desktop, Git, Sourcetree.                                            |
+| Others                  |  Agile Methodology, Jira board.                                                                        |
 
 ### <i class="fas fa-graduation-cap margin-right-5"></i> Education
 
