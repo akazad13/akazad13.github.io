@@ -12,7 +12,7 @@ mermaid: true
 
 ## Introduction
 
-The SOLID principles are five design principles that help developers create maintainable, scalable, and flexible software. These principles were introduced by Robert C. 
+The SOLID principles are five design principles that help developers create maintainable, scalable, and flexible software. Robert C. introduced the SOLID principles, 
 Martin (Uncle Bob) has become widely adopted in object-oriented programming.
 
 The Five SOLID Principles
@@ -25,9 +25,9 @@ The Five SOLID Principles
 
 ## S → Single Responsibility
 
-**A class should have a single responsibility.** If a Class has many responsibilities, it increases the possibility of bugs because making changes to one of its responsibilities, could affect the other ones without you knowing.
+**A class should have a single responsibility.** If a Class has many responsibilities, it increases the possibility of bugs because changing one of its responsibilities could affect the other without you knowing.
 
-This principle aims to separate behaviors so that if bugs arise as a result of your change, it won’t affect other unrelated behaviors.
+This principle aims to separate behaviors so that if bugs arise due to your change, it won’t affect unrelated behaviors.
 
 ```mermaid
 ---
@@ -60,9 +60,9 @@ class Notification {
 
 ## O → Open/Close Principles
 
-**Classes should be open for extension, but closed for modification.** Changing the current behavior of a Class will affect all the systems using that Class.
+**Classes should be open for extension but closed for modification.** Changing the current behavior of a Class will affect all the systems using that Class.
 
-This principle aims to extend a Class’s behavior without changing the existing behavior of that Class. This is to avoid causing bugs wherever the Class is being used.
+This principle aims to extend a class’s behavior without changing its existing behavior. This is to avoid causing bugs wherever the Class is being used.
 
 ```mermaid
 ---
@@ -101,7 +101,7 @@ class Rectangle{
 }
 ```
 
-Instead we should write the class in such a way that it can be extendable:
+Instead, we should write the class in such a way that it can be extendable:
 
 ```mermaid
 classDiagram
@@ -125,11 +125,11 @@ class Circle{
 
 ## **L →** **Liskov Substitution**
 
-This principle states that objects of a superclass should be replaceable with objects of its subclasses without affecting the correctness of the program. That means a subclass should completely adhere to the behavior expected by the superclass. The Liskov Substitution Principle encourages a design where subclasses are substitutable for their base classes.
+This principle states that objects of a superclass should be replaceable with objects of its subclasses without affecting the correctness. That means a subclass should completely adhere to the behavior expected by the superclass. The Liskov Substitution Principle encourages a design in which subclasses are substitutable for their base classes.
 
-When a **child** Class cannot perform the same actions as its **parent** Class, this can cause bugs.
+Bugs occur when a **child** Class cannot perform the same actions as its **parent** Class.
 
-The **child** Class should be able to process the same requests and deliver the same result as the **parent** Class or it could deliver a result that is of the same type.
+The **child** Class should be able to process the exact requests and deliver the same result as the **parent** Class, or it could provide a result of the same type.
 
 ### Violating LSP
 
@@ -163,7 +163,7 @@ namespace test
 
 ```
 
-### Right way to implement
+### The right way to implement
 
 ```csharp
 using System;
@@ -201,7 +201,7 @@ namespace Liskov_Substitution
 }
 ```
 
-### Real life example
+### Real-life example
 
 ```csharp
 using System;
@@ -515,7 +515,7 @@ namespace Interface_Segregation
 
 ## **D  →** **Dependency Inversion**
 
-Use abstractions to decouple dependencies in the system. High level module should not depend on low level module, rather they should depend on the abstraction. 
+Use abstractions to decouple dependencies in the system. High-level modules should not depend on low-level modules; instead, they should rely on abstraction. 
 
 ```mermaid
 classDiagram
