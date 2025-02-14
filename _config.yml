@@ -152,9 +152,7 @@ paginate_path: "/blog/page:num/"
 # The base URL of your site
 baseurl: ""
 
-mermaid:
-  src: '/js/mermaid.js'
-  src_config: '/js/mermaid_config.js'
+mermaid: true
 # ------------ The following options are not recommended to be modified ------------------
 
 kramdown:
