@@ -29,22 +29,22 @@ of the company.
 <br>
 Enosis Solutions
 
-- Leading two teams comprising 8 developers, conducting requirements analysis & task estimation, implementing solutions, providing guidance,
+- Leading two teams comprising 6 developers, conducting requirements analysis & task estimation, implementing solutions, providing guidance,
 reviewing code changes, and facilitating decision-making processes to enhance productivity and efficiency.
 - Collaborating with other team members in migrating large projects from on-premise to
 Azure Cloud, optimizing system performance and scalability.
 - Mentoring and training junior engineers and interns, fostering their professional growth
 and development.
 - Maintaining code Key Performance Indicators (KPI) using SonarQube, ensuring code
-quality standards are met, and providing ongoing support and training to developers.
+quality standards are met, and ongoing support and training are provided to developers.
 
 <span style="float: left; font-weight: bold; font-size: 1rem;">Senior Software Engineer</span> <span style="float: right">December 2020 – November 2023</span>
 <br>
 Enosis Solutions
 
 - Developed and Led a team of 5 developers in building a referral system in ASP.NET Core,
-resulting in a significant increase in client engagement and acquisition.
-- Acted as a team's main point of contact, overseeing task planning, sprint activities, and
+significantly increasing client engagement and acquisition.
+- Acted as a team's primary point of contact, overseeing task planning, sprint activities, and
 client communications to ensure project milestones were met on time and within
 budget.
 - Worked on the development of a campaign management system (email & SMS) and a
@@ -56,7 +56,7 @@ performance of the existing codebase.
 - Developed a tool that identifies charting data-related bugs that help the first responder
 as well as the developer to quickly find and fix bugs.
 - Developed a tool that helps deploy DB DML changes from multiple files to the local
-database automatically and easily so that developer can easily keep their local DB up to
+database automatically and efficiently so that developer can easily keep their local DB up to
 date.
 
 <span style="float: left; font-weight: bold; font-size: 1rem;">Software Engineer</span> <span style="float: right">December 2018 - November 2020</span>
