@@ -1,8 +1,7 @@
 ---
 layout: post
 title: SOLID Principles with Examples
-description: The SOLID principles are five design principles that help developers create maintainable, scalable, and flexible software. 
-             These principles were introduced by Robert C. Martin (Uncle Bob) and have become widely adopted in object-oriented programming.
+description: Create maintainable, scalable, and flexible software
 author: kalam
 date: 2025-02-14 08:00:00 +0600
 categories: [Design Principles, System Design, Clean Code]
