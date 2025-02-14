@@ -7,7 +7,7 @@ author: kalam
 date: 2025-02-14 08:00:00 +0600
 categories: [Design Principles, System Design, Clean Code]
 tags: [design principles, system design, clean code, .net, c#]
-use_mermaid: true
+mermaid: true
 ---
 
 ## Introduction
