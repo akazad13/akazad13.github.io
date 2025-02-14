@@ -130,7 +130,7 @@ Bugs occur when a **child** Class cannot perform the same actions as its **paren
 
 The **child** Class should be able to process the exact requests and deliver the same result as the **parent** Class, or it could provide a result of the same type.
 
-### Violating LSP
+#### Violating LSP
 
 ```csharp
 using System;
@@ -162,7 +162,7 @@ namespace test
 
 ```
 
-### The right way to implement
+#### The right way to implement
 
 ```csharp
 using System;
@@ -320,9 +320,9 @@ namespace Liskov_Substitution
 
 This Principle states that **Class should not be forced to implement any methods they don’t use. Rather than one fat interface, numerous little interfaces are preferred based on groups of methods, with each interface serving one submodule.**
 
-```csharp
-// Voilationg Interface Segregation Principles
+#### Voilationg Interface Segregation Principles
 
+```csharp
 using System;
 namespace Interface_Segregation
 {
@@ -371,9 +371,8 @@ namespace Interface_Segregation
     }
 }
 ```
-
+#### Following Interface Segregation Principles
 ```csharp
-// Following Interface Segregation Principles
 using System;
 namespace Interface_Segregation
 {
@@ -526,3 +525,7 @@ class Database {
 Database --> SQL_DB
 Database --> PostgreSQL
 ```
+
+## Conclusion
+The SOLID principles provide a framework for writing clean, maintainable, and scalable code. By adhering to these principles, developers can create easier-to-understand,
+ modify, and extend software.
