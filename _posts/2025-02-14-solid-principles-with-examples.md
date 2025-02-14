@@ -4,8 +4,8 @@ title: SOLID Principles with Examples
 description: Create maintainable, scalable, and flexible software
 author: kalam
 date: 2025-02-14 08:00:00 +0600
-categories: [Design Principles, System Design, Clean Code]
-tags: [design principles, system design, clean code, .net, c#]
+categories: [System Design, Design Principles]
+tags: [system design, design principles, clean code, .net, c#]
 mermaid: true
 ---
 
