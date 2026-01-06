@@ -1,0 +1,8 @@
+{% comment %} Render short description for posts on index page {% endcomment %}
+{% if post.description %}
+  {{ post.description | markdownify | strip_html | strip_newlines | truncatewords: 30 }}
+{% elsif post.excerpt %}
+  {{ post.excerpt | strip_html | strip_newlines | truncatewords: 30 }}
+{% else %}
+  {{ post.content | strip_html | strip_newlines | truncatewords: 30 }}
+{% endif %}
