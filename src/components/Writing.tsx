@@ -13,7 +13,7 @@ function SubHeading({ icon: Icon, children }: { icon: LucideIcon; children: stri
 
 const linkClass = 'text-accent underline decoration-accent/30 underline-offset-4 hover:decoration-accent';
 
-export function Writing({ writing, blogUrl }: { writing: Portfolio['writing']; blogUrl: string }) {
+export function Writing({ writing, blogUrl }: { writing: Portfolio['writing']; blogUrl?: string }) {
   const { publication, guides, posts, series } = writing;
   const hasPosts = (posts && posts.length > 0) || (series && series.length > 0);
 
@@ -23,7 +23,7 @@ export function Writing({ writing, blogUrl }: { writing: Portfolio['writing']; b
       title="Writing"
       icon={PenLine}
       intro={
-        hasPosts ? (
+        hasPosts && blogUrl ? (
           <>
             Research, guides, and posts from{' '}
             <a href={blogUrl} target="_blank" rel="noreferrer" className={linkClass}>
@@ -110,3 +110,4 @@ export function Writing({ writing, blogUrl }: { writing: Portfolio['writing']; b
     </Section>
   );
 }
+

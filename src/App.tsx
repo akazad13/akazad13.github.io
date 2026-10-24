@@ -78,7 +78,7 @@ export default function App() {
           <Experience employers={portfolio.experience} years={years} />
           <Projects projects={portfolio.projects} />
           <Skills groups={portfolio.skills} />
-          <Writing writing={portfolio.writing} blogUrl={portfolio.profile.blogUrl} />
+          <Writing writing={portfolio.writing} />
           <Background background={portfolio.background} />
           <Contact profile={portfolio.profile} />
         </main>
@@ -89,3 +89,4 @@ export default function App() {
     </>
   );
 }
+

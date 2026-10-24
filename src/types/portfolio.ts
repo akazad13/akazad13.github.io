@@ -169,7 +169,6 @@ export interface Profile {
   email: string;
   githubUrl: string;
   linkedinUrl: string;
-  blogUrl: string;
   careerStart: string;
   openToWork: boolean;
   openToWorkText: string;

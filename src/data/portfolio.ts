@@ -15,7 +15,6 @@ const paymentsWork = NAME_CLIENT
   ? 'Planet DDS Pay, Stripe-based embedded payments'
   : 'Stripe-based embedded payments';
 
-const blog = 'https://akazad.dev/blog';
 
 export const portfolio: Portfolio = {
   profile: {
@@ -32,7 +31,6 @@ export const portfolio: Portfolio = {
     email: 'akazad.cse13@gmail.com',
     githubUrl: 'https://github.com/akazad13',
     linkedinUrl: 'https://www.linkedin.com/in/akazadcse13/',
-    blogUrl: blog,
     careerStart: '2018-12-01',
     // Your notes say to keep "open to work" visible to recruiters only. Set to true if that changes.
     openToWork: false,
