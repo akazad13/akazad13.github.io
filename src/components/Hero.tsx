@@ -14,17 +14,17 @@ export function Hero({ profile, years, onOpenResume }: HeroProps) {
     <section id="top" aria-labelledby="hero-title" className="relative">
       <div className="mx-auto grid max-w-6xl gap-12 px-5 pb-16 pt-28 sm:px-8 md:pb-24 md:pt-32 lg:grid-cols-[1fr_19rem] lg:gap-16">
         <div>
-          <div className="rise flex items-center gap-4">
+          <div className="rise flex items-center gap-4 sm:gap-5">
             <img
               src={profile.photo}
-              alt=""
-              width={64}
-              height={64}
-              className="h-16 w-16 shrink-0 rounded-full border border-line bg-surface object-cover object-top"
+              alt={profile.name}
+              width={96}
+              height={96}
+              className="h-20 w-20 shrink-0 rounded-full border-2 border-line bg-surface object-cover object-top shadow-sm sm:h-24 sm:w-24"
             />
             <div className="leading-snug">
-              <p className="font-display text-lg font-bold tracking-tight">{profile.name}</p>
-              <p className="text-[0.95rem] text-muted">
+              <p className="font-display text-xl font-bold tracking-tight sm:text-2xl">{profile.name}</p>
+              <p className="text-[0.95rem] text-muted sm:text-base">
                 {profile.role}, {profile.company}
               </p>
             </div>
@@ -115,3 +115,4 @@ export function Hero({ profile, years, onOpenResume }: HeroProps) {
     </section>
   );
 }
+
