@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
 import { 
   Briefcase, 
-  Calendar, 
   MapPin, 
   CheckCircle2, 
   ChevronDown, 
   ChevronUp,
-  Sparkles,
   Building2
 } from 'lucide-react';
 import { ExperienceItem } from '../types/portfolio';
@@ -44,7 +42,7 @@ export const ExperienceSection: React.FC<ExperienceSectionProps> = ({ experience
 
         {/* Timeline List */}
         <div className="relative border-l-2 border-slate-800 ml-4 sm:ml-6 space-y-8">
-          {experiences.map((exp, index) => {
+          {experiences.map((exp) => {
             const isExpanded = expandedId === exp.id;
             return (
               <div 
@@ -122,7 +120,7 @@ export const ExperienceSection: React.FC<ExperienceSectionProps> = ({ experience
                       <div>
                         <h4 className="text-[11px] font-mono uppercase font-bold text-slate-400 mb-2 tracking-wider">Key Technical Deliverables & Metrics:</h4>
                         <ul className="space-y-2.5">
-                          {exp.achievements.map((ach, i) => (
+                          {exp.achievements.map((ach: string, i: number) => (
                             <li key={i} className="flex items-start gap-2.5 text-xs text-slate-300 leading-relaxed">
                               <CheckCircle2 className="w-3.5 h-3.5 text-cyan-400 shrink-0 mt-0.5" />
                               <span>{ach}</span>
@@ -135,7 +133,7 @@ export const ExperienceSection: React.FC<ExperienceSectionProps> = ({ experience
                       <div>
                         <h4 className="text-[11px] font-mono uppercase font-bold text-slate-400 mb-2 tracking-wider">Applied Technologies:</h4>
                         <div className="flex flex-wrap gap-1.5">
-                          {exp.technologies.map(tech => (
+                          {exp.technologies.map((tech: string) => (
                             <span key={tech} className="px-2 py-0.5 rounded bg-slate-900 text-slate-300 text-[10px] font-mono border border-slate-800">
                               {tech}
                             </span>

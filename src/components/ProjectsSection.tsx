@@ -1,12 +1,8 @@
 import React, { useState } from 'react';
 import { 
-  FolderGit2, 
-  ExternalLink, 
-  Github, 
-  Layers, 
-  Cpu, 
-  Activity, 
-  Code2, 
+  FolderGit2,
+  ExternalLink,
+  Github,
   CheckCircle2, 
   ArrowRight,
   X,
@@ -127,7 +123,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ projects }) =>
 
                 {/* Metrics Badges */}
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-6">
-                  {project.metrics.map((metric, i) => (
+                  {project.metrics.map((metric: { label: string; value: string }, i: number) => (
                     <div key={i} className="p-2 rounded-xl bg-[var(--theme-bg-canvas)] border border-[var(--theme-border)] text-center">
                       <div className="text-xs sm:text-sm font-bold text-[var(--theme-primary)] font-mono">{metric.value}</div>
                       <div className="text-[10px] text-slate-400 leading-tight mt-0.5 font-sans">{metric.label}</div>
@@ -139,7 +135,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ projects }) =>
               {/* Footer: Tech Stack & Actions */}
               <div>
                 <div className="flex flex-wrap gap-1.5 mb-5">
-                  {project.techStack.map((tech) => (
+                  {project.techStack.map((tech: string) => (
                     <span
                       key={tech}
                       className="text-[10px] font-mono px-2 py-0.5 rounded-lg bg-[var(--theme-bg-canvas)] text-slate-300 border border-[var(--theme-border)]"
@@ -295,7 +291,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ projects }) =>
                   <div>
                     <h4 className="text-[11px] uppercase font-mono text-slate-400 font-bold mb-2 tracking-wider">Verified Production Benchmarks</h4>
                     <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-                      {activeProjectModal.metrics.map((m, i) => (
+                      {activeProjectModal.metrics.map((m: { label: string; value: string }, i: number) => (
                         <div key={i} className="p-3 rounded-xl bg-[var(--theme-bg-canvas)] border border-[var(--theme-border)] text-center">
                           <p className="text-base font-bold text-[var(--theme-primary)] font-mono">{m.value}</p>
                           <p className="text-xs text-slate-400 mt-0.5 font-sans">{m.label}</p>
@@ -310,7 +306,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ projects }) =>
                 <div className="space-y-4">
                   <h4 className="text-[11px] uppercase font-mono text-slate-400 font-bold tracking-wider">Key Architectural Decisions:</h4>
                   <ul className="space-y-3">
-                    {activeProjectModal.architectureDetails.map((detail, idx) => (
+                    {activeProjectModal.architectureDetails.map((detail: string, idx: number) => (
                       <li key={idx} className="flex items-start gap-3 p-3 rounded-xl bg-[var(--theme-bg-canvas)] border border-[var(--theme-border)]">
                         <CheckCircle2 className="w-4 h-4 text-[var(--theme-primary)] shrink-0 mt-0.5" />
                         <span className="text-xs sm:text-sm text-slate-200 leading-relaxed font-sans">{detail}</span>
@@ -321,7 +317,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ projects }) =>
                   <div className="pt-2">
                     <h4 className="text-[11px] uppercase font-mono text-slate-400 font-bold mb-2 tracking-wider">Technology Stack</h4>
                     <div className="flex flex-wrap gap-2">
-                      {activeProjectModal.techStack.map(t => (
+                      {activeProjectModal.techStack.map((t: string) => (
                         <span key={t} className="px-2.5 py-1 rounded-lg bg-[var(--theme-bg-canvas)] text-slate-200 text-xs font-mono border border-[var(--theme-border)]">
                           {t}
                         </span>

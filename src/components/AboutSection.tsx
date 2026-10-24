@@ -1,9 +1,7 @@
 import React from 'react';
 import { 
   User, 
-  Sparkles, 
   Cpu, 
-  Heart, 
   Layers, 
   Users,
   Code2,

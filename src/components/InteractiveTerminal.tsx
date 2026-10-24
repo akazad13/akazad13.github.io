@@ -5,10 +5,7 @@ import {
   Maximize2, 
   Minimize2, 
   Trash2, 
-  CornerDownLeft, 
-  Sparkles,
-  HelpCircle,
-  Play
+  Sparkles
 } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { PortfolioData } from '../types/portfolio';
@@ -34,7 +31,7 @@ export const InteractiveTerminal: React.FC<InteractiveTerminalProps> = ({
   onClose,
   portfolio,
   onOpenResume,
-  onOpenCustomizer,
+  onOpenCustomizer: _onOpenCustomizer,
 }) => {
   const [inputVal, setInputVal] = useState('');
   const [history, setHistory] = useState<CommandHistoryItem[]>([]);
@@ -151,13 +148,13 @@ export const InteractiveTerminal: React.FC<InteractiveTerminalProps> = ({
             <p className="text-emerald-400 font-semibold">⚡ Technical Skills Matrix:</p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3 pt-1">
               {['languages', 'backend', 'cloud', 'databases', 'frontend', 'architecture'].map((cat) => {
-                const catSkills = portfolio.skills.filter(s => s.category === cat);
+                const catSkills = portfolio.skills.filter((s) => s.category === cat);
                 if (catSkills.length === 0) return null;
                 return (
                   <div key={cat} className="p-2.5 rounded bg-zinc-900 border border-zinc-800">
                     <p className="text-teal-400 font-bold uppercase text-[11px] mb-1">{cat}</p>
                     <div className="flex flex-wrap gap-1.5">
-                      {catSkills.map(s => (
+                      {catSkills.map((s) => (
                         <span key={s.id} className="px-1.5 py-0.5 rounded bg-zinc-800 text-zinc-200 text-[11px]">
                           {s.name} ({s.level}%)
                         </span>
@@ -186,7 +183,7 @@ export const InteractiveTerminal: React.FC<InteractiveTerminalProps> = ({
                   </div>
                   <p className="text-zinc-400 text-[11px]">{p.tagline}</p>
                   <div className="flex flex-wrap gap-1 pt-1">
-                    {p.techStack.map(t => (
+                    {p.techStack.map((t: string) => (
                       <span key={t} className="text-[10px] text-zinc-400 bg-zinc-800 px-1 rounded">{t}</span>
                     ))}
                   </div>
@@ -201,7 +198,7 @@ export const InteractiveTerminal: React.FC<InteractiveTerminalProps> = ({
         outputContent = (
           <div className="space-y-3 py-1 text-xs">
             <p className="text-emerald-400 font-semibold">🏢 Career History:</p>
-            {portfolio.experiences.map(exp => (
+            {portfolio.experiences.map((exp) => (
               <div key={exp.id} className="border-l-2 border-emerald-500/60 pl-3 py-0.5 space-y-1">
                 <div className="flex items-center justify-between">
                   <span className="font-bold text-zinc-200">{exp.role} @ {exp.company}</span>
@@ -229,7 +226,7 @@ export const InteractiveTerminal: React.FC<InteractiveTerminalProps> = ({
               </div>
               <div>
                 <p className="text-teal-400 font-semibold">RECENT ROLES:</p>
-                {portfolio.experiences.slice(0, 2).map(e => (
+                {portfolio.experiences.slice(0, 2).map((e) => (
                   <p key={e.id} className="text-zinc-300">
                     • <span className="font-bold">{e.role}</span> @ {e.company} ({e.period})
                   </p>

@@ -7,9 +7,7 @@ import {
   Github, 
   Linkedin, 
   Twitter, 
-  Clock, 
   MapPin, 
-  Sparkles,
   CheckCircle2
 } from 'lucide-react';
 import confetti from 'canvas-confetti';

@@ -7,10 +7,6 @@ import {
   X, 
   Volume2, 
   VolumeX, 
-  Sparkles,
-  Github,
-  Linkedin,
-  Mail,
   ChevronRight
 } from 'lucide-react';
 import { ProfileInfo } from '../types/portfolio';
@@ -89,7 +85,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               className="w-8 h-8 rounded-lg flex items-center justify-center text-black font-extrabold text-xs shadow-md group-hover:scale-105 transition-transform"
               style={{ backgroundColor: 'var(--theme-primary)' }}
             >
-              {profile.name.split(' ').map(n => n[0]).join('').slice(0, 2) || 'CP'}
+              {profile.name.split(' ').map((n: string) => n[0]).join('').slice(0, 2) || 'CP'}
             </div>
           )}
           <div className="flex flex-col">

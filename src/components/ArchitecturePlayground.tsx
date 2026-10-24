@@ -11,8 +11,7 @@ import {
   Layers, 
   Zap,
   Activity,
-  Info,
-  CheckCircle2
+  Info
 } from 'lucide-react';
 import { ArchitectureDiagram } from '../types/portfolio';
 import { sounds } from '../utils/audio';
@@ -47,7 +46,7 @@ export const ArchitecturePlayground: React.FC<ArchitecturePlaygroundProps> = ({ 
   if (!currentArch) return null;
 
   const currentStep = currentArch.flowSteps[activeStepIndex];
-  const activeNode = currentArch.nodes.find(n => n.id === selectedNodeId) || currentArch.nodes[0];
+  const activeNode = currentArch.nodes.find((n: { id: string }) => n.id === selectedNodeId) || currentArch.nodes[0];
 
   const getNodeIcon = (type: string) => {
     switch (type) {
@@ -157,7 +156,7 @@ export const ArchitecturePlayground: React.FC<ArchitecturePlaygroundProps> = ({ 
 
           {/* Nodes Visual Flow Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 mb-8">
-            {currentArch.nodes.map((node, index) => {
+            {currentArch.nodes.map((node) => {
               const Icon = getNodeIcon(node.type);
               const isSource = currentStep?.from === node.id;
               const isTarget = currentStep?.to === node.id;
@@ -233,7 +232,7 @@ export const ArchitecturePlayground: React.FC<ArchitecturePlaygroundProps> = ({ 
 
             {/* Metrics Chips */}
             <div className="flex flex-wrap items-center gap-3">
-              {currentArch.stats.map((stat, i) => (
+              {currentArch.stats.map((stat: { label: string; value: string }, i: number) => (
                 <div key={i} className="px-3 py-1.5 rounded-lg bg-[#0F0F0F] border border-slate-800 text-xs font-mono">
                   <span className="text-slate-500">{stat.label}: </span>
                   <span className="text-cyan-400 font-bold">{stat.value}</span>

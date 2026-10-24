@@ -1,5 +1,5 @@
 import React from 'react';
-import { MessageSquareQuote, Star, Building2, UserCheck } from 'lucide-react';
+import { MessageSquareQuote, Star } from 'lucide-react';
 import { TestimonialItem } from '../types/portfolio';
 
 interface TestimonialsSectionProps {

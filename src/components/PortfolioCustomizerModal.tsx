@@ -6,16 +6,9 @@ import {
   Download, 
   Upload, 
   Settings, 
-  Sparkles,
   Check,
   User,
-  Mail,
-  Github,
-  Linkedin,
-  MapPin,
-  Briefcase,
   Camera,
-  Image as ImageIcon,
   Trash2
 } from 'lucide-react';
 import { PortfolioData, ProfileInfo } from '../types/portfolio';
@@ -60,7 +53,7 @@ export const PortfolioCustomizerModal: React.FC<PortfolioCustomizerModalProps> =
     const reader = new FileReader();
     reader.onload = (event) => {
       const dataUrl = event.target?.result as string;
-      setProfile((prev) => ({ ...prev, avatarUrl: dataUrl }));
+      setProfile((prev: typeof profile) => ({ ...prev, avatarUrl: dataUrl }));
       sounds.playSuccess();
     };
     reader.readAsDataURL(file);
@@ -167,7 +160,7 @@ export const PortfolioCustomizerModal: React.FC<PortfolioCustomizerModalProps> =
               {profile.avatarUrl && (
                 <button
                   type="button"
-                  onClick={() => setProfile((prev) => ({ ...prev, avatarUrl: undefined }))}
+                  onClick={() => setProfile((prev: typeof profile) => ({ ...prev, avatarUrl: undefined }))}
                   className="text-[10px] text-rose-400 hover:text-rose-300 flex items-center gap-1"
                 >
                   <Trash2 className="w-3 h-3" />
@@ -235,7 +228,7 @@ export const PortfolioCustomizerModal: React.FC<PortfolioCustomizerModalProps> =
                     <button
                       key={idx}
                       type="button"
-                      onClick={() => setProfile((prev) => ({ ...prev, avatarUrl: preset.url }))}
+                      onClick={() => setProfile((prev: typeof profile) => ({ ...prev, avatarUrl: preset.url }))}
                       className="px-2 py-0.5 rounded bg-slate-900 hover:bg-slate-800 border border-slate-800 text-[10px] text-slate-400 hover:text-cyan-300 transition-colors"
                     >
                       {preset.label}

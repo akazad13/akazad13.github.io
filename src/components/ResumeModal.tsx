@@ -1,13 +1,9 @@
 import React from 'react';
 import { 
-  X, 
-  Printer, 
-  Download, 
-  ExternalLink, 
-  Mail, 
-  MapPin, 
-  Github, 
-  Linkedin,
+  X,
+  Printer,
+  Mail,
+  MapPin,
   FileCheck
 } from 'lucide-react';
 import { PortfolioData } from '../types/portfolio';
@@ -177,7 +173,7 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({
                   <div className="flex items-center justify-between font-bold text-zinc-900">
                     <span className="text-xs">{proj.title} ({proj.category})</span>
                     <span className="text-[11px] font-mono text-zinc-500">
-                      {proj.metrics.map(m => `${m.label}: ${m.value}`).join(' | ')}
+                      {proj.metrics.map((m: { label: string; value: string }) => `${m.label}: ${m.value}`).join(' | ')}
                     </span>
                   </div>
                   <p className="text-zinc-700 text-xs">{proj.description}</p>

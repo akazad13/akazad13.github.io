@@ -8,11 +8,9 @@ import {
   Cpu, 
   Search, 
   Sparkles,
-  CheckCircle2,
-  Terminal,
   Zap
 } from 'lucide-react';
-import { SkillItem, SkillCategory } from '../types/portfolio';
+import { SkillItem } from '../types/portfolio';
 import { sounds } from '../utils/audio';
 
 interface SkillsSectionProps {
@@ -40,7 +38,7 @@ export const SkillsSection: React.FC<SkillsSectionProps> = ({ skills }) => {
       const matchesSearch = 
         skill.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
         skill.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        skill.keywords.some(k => k.toLowerCase().includes(searchQuery.toLowerCase()));
+        skill.keywords.some((k: string) => k.toLowerCase().includes(searchQuery.toLowerCase()));
       return matchesCategory && matchesSearch;
     });
   }, [skills, selectedCategory, searchQuery]);
@@ -157,7 +155,7 @@ export const SkillsSection: React.FC<SkillsSectionProps> = ({ skills }) => {
 
                 {/* Keywords Chips */}
                 <div className="mt-4 pt-3 border-t border-slate-800/80 flex flex-wrap gap-1.5">
-                  {skill.keywords.map((kw) => (
+                  {skill.keywords.map((kw: string) => (
                     <span
                       key={kw}
                       className="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-900 text-slate-300 border border-slate-800"

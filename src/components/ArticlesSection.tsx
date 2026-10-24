@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import { 
   BookOpen, 
-  ExternalLink, 
   Clock, 
-  Calendar, 
   Bookmark, 
   BookmarkCheck,
   ArrowRight
@@ -94,7 +92,7 @@ export const ArticlesSection: React.FC<ArticlesSectionProps> = ({ articles }) =>
                 {/* Tags & Action */}
                 <div>
                   <div className="flex flex-wrap gap-1.5 mb-4">
-                    {article.tags.map(tag => (
+                    {article.tags.map((tag: string) => (
                       <span key={tag} className="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-900 text-slate-300 border border-slate-800">
                         #{tag}
                       </span>
