@@ -1,6 +1,0 @@
-{
-  "name": "Software Engineer Portfolio",
-  "description": "A high-performance, interactive software engineer portfolio featuring interactive CLI terminal, live project showcases, system architecture breakdowns, interactive resume viewer, and customizable profile data.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}

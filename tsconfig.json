@@ -14,21 +14,5 @@
     "allowImportingTsExtensions": true,
     "noEmit": true
   },
-  "include": ["src", "vite.config.ts"],
-  "exclude": [
-    "src/components/AboutSection.tsx",
-    "src/components/ArchitecturePlayground.tsx",
-    "src/components/ArticlesSection.tsx",
-    "src/components/ContactSection.tsx",
-    "src/components/ExperienceSection.tsx",
-    "src/components/HeroSection.tsx",
-    "src/components/InteractiveTerminal.tsx",
-    "src/components/Navbar.tsx",
-    "src/components/PortfolioCustomizerModal.tsx",
-    "src/components/ProjectsSection.tsx",
-    "src/components/ResumeModal.tsx",
-    "src/components/SkillsSection.tsx",
-    "src/components/TestimonialsSection.tsx",
-    "src/data/defaultPortfolio.ts"
-  ]
+  "include": ["src", "vite.config.ts"]
 }
