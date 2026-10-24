@@ -183,7 +183,7 @@ export const portfolio: Portfolio = {
       repoUrl: 'https://github.com/akazad13/pocket',
     },
     {
-      name: 'Chipai',
+      name: 'chipai-ashen',
       kind: 'product',
       summary: 'Crowdsourced price board for Bangladeshi social commerce sellers.',
       tech: ['Next.js 15', 'React 19', 'Supabase', 'PostgreSQL'],
