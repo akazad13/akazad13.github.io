@@ -273,11 +273,6 @@ export const portfolio: Portfolio = {
   background: {
     education: [
       {
-        degree: 'Master of Engineering, Computer Science and Engineering',
-        school: 'Bangladesh University of Engineering and Technology (BUET)',
-        period: '2019 to 2022',
-      },
-      {
         degree: 'Bachelor of Science, Computer Science and Engineering',
         school: 'Rajshahi University of Engineering and Technology (RUET)',
         period: '2014 to 2018',
