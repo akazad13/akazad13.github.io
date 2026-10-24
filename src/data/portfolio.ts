@@ -196,34 +196,6 @@ export const portfolio: Portfolio = {
       tech: ['Python', 'AI agents', 'GitHub Actions'],
       repoUrl: 'https://github.com/akazad13/sdlc-workflow-automate',
     },
-    {
-      name: 'Clean Architecture template',
-      kind: 'toolkit',
-      summary: 'Starter solution for ASP.NET Core with CQRS, MediatR, and EF Core, ready to clone for new services.',
-      tech: ['ASP.NET Core', 'CQRS', 'MediatR', 'EF Core'],
-      repoUrl: 'https://github.com/akazad13/clearn-architecture-template',
-    },
-    {
-      name: 'OAuth and OIDC sample',
-      kind: 'toolkit',
-      summary: 'Authentication and authorization with OAuth 2.0 and OpenID Connect across an ASP.NET Core API and an Angular client.',
-      tech: ['ASP.NET Core', 'Angular', 'OIDC', 'JWT'],
-      repoUrl: 'https://github.com/akazad13/oauth-oidc',
-    },
-    {
-      name: 'Serverless .NET on AWS',
-      kind: 'toolkit',
-      summary: 'Cloud-native .NET samples with AWS Lambda, S3, and DynamoDB.',
-      tech: ['C#', 'AWS Lambda', 'S3', 'DynamoDB'],
-      repoUrl: 'https://github.com/akazad13/cloud-work',
-    },
-    {
-      name: 'Quiz app',
-      kind: 'product',
-      summary: 'Online quiz application with ASP.NET Core.',
-      tech: ['ASP.NET Core', 'C#'],
-      repoUrl: 'https://github.com/akazad13/quiz-app',
-    },
   ],
 
   skills: [
@@ -294,28 +266,8 @@ export const portfolio: Portfolio = {
         repoUrl: 'https://github.com/akazad13/csharp-design-patterns',
       },
     ],
-    posts: [
-      {
-        title: 'SOLID principles with examples',
-        date: 'Feb 2025',
-        summary: 'Each principle explained with a C# example of the problem it prevents.',
-        url: `${blog}/solid-principles-with-examples/`,
-      },
-    ],
-    series: [
-      {
-        title: 'Sorting algorithms',
-        date: 'Sep 2024',
-        summary: 'How five classic sorts work, with complexity and code.',
-        posts: [
-          { title: 'Merge sort', url: `${blog}/merge-sort/` },
-          { title: 'Quick sort', url: `${blog}/quick-sort/` },
-          { title: 'Heap sort', url: `${blog}/heap-sort/` },
-          { title: 'Counting sort', url: `${blog}/counting-sort/` },
-          { title: 'Radix sort', url: `${blog}/radix-sort/` },
-        ],
-      },
-    ],
+    posts: [],
+    series: [],
   },
 
   background: {

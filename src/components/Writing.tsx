@@ -15,6 +15,7 @@ const linkClass = 'text-accent underline decoration-accent/30 underline-offset-4
 
 export function Writing({ writing, blogUrl }: { writing: Portfolio['writing']; blogUrl: string }) {
   const { publication, guides, posts, series } = writing;
+  const hasPosts = (posts && posts.length > 0) || (series && series.length > 0);
 
   return (
     <Section
@@ -22,13 +23,17 @@ export function Writing({ writing, blogUrl }: { writing: Portfolio['writing']; b
       title="Writing"
       icon={PenLine}
       intro={
-        <>
-          Research, guides, and posts from{' '}
-          <a href={blogUrl} target="_blank" rel="noreferrer" className={linkClass}>
-            my blog
-          </a>
-          .
-        </>
+        hasPosts ? (
+          <>
+            Research, guides, and posts from{' '}
+            <a href={blogUrl} target="_blank" rel="noreferrer" className={linkClass}>
+              my blog
+            </a>
+            .
+          </>
+        ) : (
+          'Published research and technical guides.'
+        )
       }
     >
       <div className="space-y-14">
@@ -65,40 +70,42 @@ export function Writing({ writing, blogUrl }: { writing: Portfolio['writing']; b
           </ul>
         </div>
 
-        <div>
-          <SubHeading icon={PenLine}>Blog posts</SubHeading>
-          <ul className="mt-5 divide-y divide-line border-y border-line">
-            {posts.map((p) => (
-              <li key={p.title} className="grid gap-1 py-4 sm:grid-cols-[6rem_1fr] sm:gap-6">
-                <span className="text-[0.92rem] text-muted">{p.date}</span>
-                <div>
-                  <a href={p.url} target="_blank" rel="noreferrer" className="font-medium hover:text-accent">
-                    {p.title}
-                  </a>
-                  <p className="text-[0.95rem] text-muted">{p.summary}</p>
-                </div>
-              </li>
-            ))}
-            {series.map((s) => (
-              <li key={s.title} className="grid gap-1 py-4 sm:grid-cols-[6rem_1fr] sm:gap-6">
-                <span className="text-[0.92rem] text-muted">{s.date}</span>
-                <div>
-                  <p className="font-medium">{s.title} series</p>
-                  <p className="text-[0.95rem] text-muted">{s.summary}</p>
-                  <ul className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-[0.95rem]">
-                    {s.posts.map((post) => (
-                      <li key={post.title}>
-                        <a href={post.url} target="_blank" rel="noreferrer" className={linkClass}>
-                          {post.title}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </li>
-            ))}
-          </ul>
-        </div>
+        {hasPosts && (
+          <div>
+            <SubHeading icon={PenLine}>Blog posts</SubHeading>
+            <ul className="mt-5 divide-y divide-line border-y border-line">
+              {posts.map((p) => (
+                <li key={p.title} className="grid gap-1 py-4 sm:grid-cols-[6rem_1fr] sm:gap-6">
+                  <span className="text-[0.92rem] text-muted">{p.date}</span>
+                  <div>
+                    <a href={p.url} target="_blank" rel="noreferrer" className="font-medium hover:text-accent">
+                      {p.title}
+                    </a>
+                    <p className="text-[0.95rem] text-muted">{p.summary}</p>
+                  </div>
+                </li>
+              ))}
+              {series.map((s) => (
+                <li key={s.title} className="grid gap-1 py-4 sm:grid-cols-[6rem_1fr] sm:gap-6">
+                  <span className="text-[0.92rem] text-muted">{s.date}</span>
+                  <div>
+                    <p className="font-medium">{s.title} series</p>
+                    <p className="text-[0.95rem] text-muted">{s.summary}</p>
+                    <ul className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-[0.95rem]">
+                      {s.posts.map((post) => (
+                        <li key={post.title}>
+                          <a href={post.url} target="_blank" rel="noreferrer" className={linkClass}>
+                            {post.title}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </div>
     </Section>
   );
