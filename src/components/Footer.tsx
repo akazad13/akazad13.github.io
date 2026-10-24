@@ -5,12 +5,6 @@ export function Footer({ name }: { name: string }) {
         <p>
           &copy; {new Date().getFullYear()} {name}
         </p>
-        <p>
-          Built with React and Tailwind CSS.{' '}
-          <a href="https://github.com/akazad13/portfolio" target="_blank" rel="noreferrer" className="underline underline-offset-4 hover:text-ink">
-            View source
-          </a>
-        </p>
       </div>
     </footer>
   );
