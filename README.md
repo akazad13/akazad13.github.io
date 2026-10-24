@@ -63,7 +63,7 @@ The site is built as a blazing-fast, single-page application with **React 19**, 
 | **Experience** | Career progression at Enosis Solutions from Software Engineer to Technical Lead, interactive Career Path chart, architectural highlights, and tech stacks. |
 | **Projects** | Filterable open-source architectures, full-stack microservices, and engineering templates with architecture tags and GitHub links. |
 | **Skills** | Comprehensive technical matrix grouped into Backend, Frontend, Cloud & Azure, Identity & Payments, Data, Delivery, and Engineering Leadership. |
-| **Writing** | Peer-reviewed IEEE research publication on distributed data collection, technical deep-dives, and blog articles. |
+| **Writing** | Peer-reviewed IEEE research publication on distributed data collection and technical deep-dives. |
 | **Background** | Formal education (BUET, RUET), competitive programming solve statistics, awards/honors, and professional training certifications. |
 | **Contact** | Direct communication details, timezone availability (UTC+6), and social channels. |
 
@@ -89,7 +89,7 @@ flowchart TD
 ## 📂 Repository Layout
 
 ```text
-portfolio-blog/
+akazad13.github.io/
 ├── public/
 │   ├── favicons/               # Multi-platform browser and touch favicons
 │   └── md-abul-kalam.png       # Profile portrait asset
@@ -192,7 +192,6 @@ You can then refer to `'docker'` directly inside `portfolio.ts` without introduc
 **Md Abul Kalam**  
 *Software Technical Lead • .NET & Azure Specialist*
 
-- 🌐 **Blog**: [akazad.dev/blog](https://akazad.dev/blog)
 - 💼 **LinkedIn**: [linkedin.com/in/akazadcse13](https://www.linkedin.com/in/akazadcse13/)
 - 🐙 **GitHub**: [@akazad13](https://github.com/akazad13)
 - ✉️ **Email**: [akazad.cse13@gmail.com](mailto:akazad.cse13@gmail.com)
