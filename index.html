@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Md Abul Kalam | Technical Lead, .NET and Azure</title>
+    <meta name="description" content="Md Abul Kalam is a technical lead in Dhaka who builds healthcare SaaS and payment platforms with C#, ASP.NET Core, Azure, and React." />
+    <meta name="author" content="Md Abul Kalam" />
+    <meta name="theme-color" content="#f2f4f3" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0f141c" media="(prefers-color-scheme: dark)" />
+    <meta property="og:type" content="profile" />
+    <meta property="og:title" content="Md Abul Kalam | Technical Lead, .NET and Azure" />
+    <meta property="og:description" content="Technical lead building healthcare SaaS and payment platforms with C#, ASP.NET Core, Azure, and React." />
+    <meta property="og:image" content="./md-abul-kalam.png" />
+    <meta name="twitter:card" content="summary" />
+    <link rel="icon" href="./favicons/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicons/favicon-32x32.png" />
+    <link rel="apple-touch-icon" href="./favicons/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+    <script>
+      // Apply the saved or system theme before first paint to avoid a flash.
+      (function () {
+        var theme;
+        try { theme = localStorage.getItem('theme'); } catch (e) {}
+        if (theme !== 'light' && theme !== 'dark') {
+          theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+        document.documentElement.dataset.theme = theme;
+      })();
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Md Abul Kalam",
+        "jobTitle": "Software Technical Lead",
+        "worksFor": { "@type": "Organization", "name": "Enosis Solutions" },
+        "address": { "@type": "PostalAddress", "addressLocality": "Dhaka", "addressCountry": "BD" },
+        "alumniOf": ["Bangladesh University of Engineering and Technology", "Rajshahi University of Engineering and Technology"],
+        "sameAs": ["https://github.com/akazad13", "https://www.linkedin.com/in/akazadcse13/"]
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
