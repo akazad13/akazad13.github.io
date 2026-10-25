@@ -91,6 +91,7 @@ flowchart TD
 ```text
 akazad13.github.io/
 ├── public/
+│   ├── favicon.ico             # Root browser favicon fallback
 │   ├── favicons/               # Multi-platform browser and touch favicons
 │   └── md-abul-kalam.png       # Profile portrait asset
 ├── src/
@@ -184,6 +185,12 @@ You can then refer to `'docker'` directly inside `portfolio.ts` without introduc
 | `npm run build` | Runs TypeScript type checking (`tsc --noEmit`) and compiles the static site to `dist/`. |
 | `npm run preview` | Serves the generated production build locally for verification. |
 | `npm run lint` | Runs the TypeScript compiler in no-emit mode to check for type errors. |
+
+---
+
+## 🤖 AI-Driven Development & Contributing
+
+Autonomous coding agents (Antigravity, Cursor, Claude Code, GitHub Copilot) operating in this repository must consult [AGENTS.md](AGENTS.md) for strict architectural invariants, styling constraints, and pre-commit verification gates.
 
 ---
 
