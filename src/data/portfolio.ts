@@ -139,16 +139,6 @@ export const portfolio: Portfolio = {
       repoUrl: 'https://github.com/akazad13/order-flow',
     },
     {
-      name: 'Basachai',
-      kind: 'product',
-      featured: true,
-      summary:
-        'Bangla-first rental marketplace MVP with server-rendered Next.js, internationalized routing, and an ASP.NET Core API on PostgreSQL.',
-      why: 'A full product, from data model to localized UI and end-to-end tests.',
-      tech: ['ASP.NET Core', 'Next.js 15', 'next-intl', 'PostgreSQL 17', 'EF Core', 'Playwright'],
-      repoUrl: 'https://github.com/akazad13/basachai',
-    },
-    {
       name: 'Shopizy API',
       kind: 'architecture',
       summary: 'Online store management API with Clean Architecture: products, categories, carts, orders, and users.',
@@ -172,20 +162,6 @@ export const portfolio: Portfolio = {
       tech: ['Angular 21', 'ASP.NET Core 10', 'Identity', 'MySQL'],
       repoUrl: 'https://github.com/akazad13/adda',
       liveUrl: 'https://addaa.alwaysdata.net',
-    },
-    {
-      name: 'Pocket',
-      kind: 'product',
-      summary: 'Mobile-first personal finance app for expenses and net worth, running on the edge.',
-      tech: ['Cloudflare Workers', 'Cloudflare D1', 'Next.js 16', 'React 19'],
-      repoUrl: 'https://github.com/akazad13/pocket',
-    },
-    {
-      name: 'chipai-ashen',
-      kind: 'product',
-      summary: 'Crowdsourced price board for Bangladeshi social commerce sellers.',
-      tech: ['Next.js 15', 'React 19', 'Supabase', 'PostgreSQL'],
-      repoUrl: 'https://github.com/akazad13/chipai-ashen',
     },
     {
       name: 'SDLC workflow automation',
