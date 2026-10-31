@@ -39,7 +39,7 @@ export function Writing({ writing, blogUrl }: { writing: Portfolio['writing']; b
       <div className="space-y-14">
         <div>
           <SubHeading icon={ScrollText}>Published research</SubHeading>
-          <article className="mt-5 rounded-2xl border border-line bg-surface p-6">
+          <article className="mt-5 rounded-2xl border border-line bg-surface p-5 sm:p-6">
             <h4 className="font-display text-lg font-bold leading-snug tracking-tight">
               <a href={publication.url} target="_blank" rel="noreferrer" className={linkClass}>
                 {publication.title}
@@ -53,7 +53,7 @@ export function Writing({ writing, blogUrl }: { writing: Portfolio['writing']; b
 
         <div>
           <SubHeading icon={BookOpen}>Guides</SubHeading>
-          <ul className="mt-5 grid gap-5 sm:grid-cols-3">
+          <ul className="mt-5 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {guides.map((g) => (
               <li key={g.title} className="flex flex-col border-t-2 border-ink pt-4">
                 <a href={g.url} target="_blank" rel="noreferrer" className="font-display text-lg font-bold tracking-tight hover:text-accent">

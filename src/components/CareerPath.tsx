@@ -28,7 +28,7 @@ export function CareerPath({ roles }: { roles: Role[] }) {
   const dim = (i: number) => (hovered !== null && hovered !== i ? 'opacity-45' : 'opacity-100');
 
   return (
-    <figure className="mb-14 rounded-2xl border border-line bg-surface p-5 sm:p-6">
+    <figure className="mb-14 rounded-2xl border border-line bg-surface p-4 sm:p-6">
       <figcaption className="mb-5 flex flex-wrap items-baseline justify-between gap-2">
         <span className="font-semibold">Career path</span>
         <span className="text-[0.9rem] text-muted">Bar width shows time in each role</span>
@@ -50,9 +50,9 @@ export function CareerPath({ roles }: { roles: Role[] }) {
         ))}
       </div>
 
-      {/* Labels sit under their segment on wider screens and stack on phones. */}
+      {/* Labels sit under their segment on wider screens and stack on phones and small tablets. */}
       <ol
-        className="mt-4 grid gap-4 sm:grid-cols-[var(--cols)] sm:gap-[2px]"
+        className="mt-4 grid gap-4 md:grid-cols-[var(--cols)] md:gap-[2px]"
         style={{ ['--cols' as string]: columns }}
         onMouseLeave={() => setHovered(null)}
       >
@@ -60,11 +60,11 @@ export function CareerPath({ roles }: { roles: Role[] }) {
           <li
             key={s.role.title}
             onMouseEnter={() => setHovered(i)}
-            className={`flex gap-3 transition-opacity sm:block sm:pr-3 ${dim(i)}`}
+            className={`flex gap-3 transition-opacity md:block md:pr-3 ${dim(i)}`}
           >
             <span
               aria-hidden="true"
-              className="mt-1.5 h-3 w-3 shrink-0 rounded-full sm:hidden"
+              className="mt-1.5 h-3 w-3 shrink-0 rounded-full md:hidden"
               style={{ backgroundColor: `color-mix(in oklab, var(--accent) ${shades[i]}%, var(--surface))` }}
             />
             <div className="min-w-0">

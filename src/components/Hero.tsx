@@ -12,7 +12,7 @@ export function Hero({ profile, years, onOpenResume }: HeroProps) {
 
   return (
     <section id="top" aria-labelledby="hero-title" className="relative">
-      <div className="mx-auto grid max-w-6xl gap-12 px-5 pb-16 pt-28 sm:px-8 md:pb-24 md:pt-32 lg:grid-cols-[1fr_19rem] lg:gap-16">
+      <div className="mx-auto grid max-w-6xl gap-10 px-4 pb-14 pt-24 sm:gap-12 sm:px-6 sm:pb-16 sm:pt-28 md:px-8 md:pb-24 md:pt-32 lg:grid-cols-[1fr_20rem] lg:gap-16">
         <div>
           <div className="rise flex items-center gap-4 sm:gap-5">
             <img
@@ -32,13 +32,13 @@ export function Hero({ profile, years, onOpenResume }: HeroProps) {
 
           <h1
             id="hero-title"
-            className="rise mt-8 max-w-[30ch] font-sans text-[1.85rem] font-medium leading-[1.3] tracking-normal sm:text-[2.25rem] lg:text-[2.6rem]"
+            className="rise mt-6 max-w-[30ch] font-sans text-[1.75rem] font-medium leading-[1.25] tracking-normal sm:mt-8 sm:text-[2.25rem] lg:text-[2.6rem]"
             style={{ animationDelay: '80ms' }}
           >
             {profile.headline}
           </h1>
 
-          <p className="rise mt-8 max-w-[60ch] text-lg leading-relaxed text-muted" style={{ animationDelay: '160ms' }}>
+          <p className="rise mt-6 max-w-[60ch] text-base leading-relaxed text-muted sm:mt-8 sm:text-lg" style={{ animationDelay: '160ms' }}>
             {profile.summary}
           </p>
 
@@ -49,10 +49,10 @@ export function Hero({ profile, years, onOpenResume }: HeroProps) {
             </p>
           )}
 
-          <div className="rise mt-10 flex flex-wrap items-center gap-3" style={{ animationDelay: '220ms' }}>
+          <div className="rise mt-8 flex flex-wrap items-center gap-3 sm:mt-10" style={{ animationDelay: '220ms' }}>
             <a
               href="#experience"
-              className="inline-flex items-center gap-2 rounded-lg bg-accent px-5 py-3 text-[0.95rem] font-medium text-accent-ink transition-opacity hover:opacity-90"
+              className="inline-flex items-center justify-center gap-2 rounded-lg bg-accent px-4 py-2.5 text-[0.92rem] font-medium text-accent-ink transition-opacity hover:opacity-90 sm:px-5 sm:py-3 sm:text-[0.95rem]"
             >
               See my experience
               <ArrowDown className="h-4 w-4" aria-hidden="true" />
@@ -60,7 +60,7 @@ export function Hero({ profile, years, onOpenResume }: HeroProps) {
             <button
               type="button"
               onClick={onOpenResume}
-              className="inline-flex items-center gap-2 rounded-lg border border-line bg-surface px-5 py-3 text-[0.95rem] font-medium transition-colors hover:border-ink/30"
+              className="inline-flex items-center justify-center gap-2 rounded-lg border border-line bg-surface px-4 py-2.5 text-[0.92rem] font-medium transition-colors hover:border-ink/30 sm:px-5 sm:py-3 sm:text-[0.95rem]"
             >
               <FileText className="h-4 w-4" aria-hidden="true" />
               View resume
@@ -79,9 +79,13 @@ export function Hero({ profile, years, onOpenResume }: HeroProps) {
           </div>
         </div>
 
-        <aside className="rise self-end lg:pb-2" style={{ animationDelay: '280ms' }} aria-label="At a glance">
+        <aside
+          className="rise rounded-2xl border border-line bg-surface/60 p-5 backdrop-blur-xs sm:p-6 lg:border-0 lg:bg-transparent lg:p-0 lg:self-end lg:pb-2"
+          style={{ animationDelay: '280ms' }}
+          aria-label="At a glance"
+        >
           <h2 className="text-base font-semibold tracking-normal">Right now</h2>
-          <ul className="mt-4 space-y-3.5 text-[0.95rem] leading-snug text-muted">
+          <ul className="mt-4 grid gap-3.5 text-[0.95rem] leading-snug text-muted sm:grid-cols-2 lg:grid-cols-1">
             {profile.now.map((item) => (
               <li key={item.text} className="flex items-start gap-3">
                 <IconTile name={item.icon} size="sm" />
@@ -89,7 +93,7 @@ export function Hero({ profile, years, onOpenResume }: HeroProps) {
               </li>
             ))}
           </ul>
-          <dl className="mt-8 space-y-2.5 border-t border-line pt-6 text-[0.95rem]">
+          <dl className="mt-6 border-t border-line pt-6 text-[0.95rem] sm:grid sm:grid-cols-3 sm:gap-4 sm:space-y-0 lg:block lg:space-y-2.5">
             <div className="flex items-center gap-3">
               <Briefcase className="h-4 w-4 shrink-0 text-muted" aria-hidden="true" />
               <dt className="sr-only">Experience</dt>

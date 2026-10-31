@@ -25,18 +25,18 @@ function SolvedChart({ judges }: { judges: JudgeProfile[] }) {
           <li
             key={j.name}
             onMouseEnter={() => setHovered(j.name)}
-            className={`grid grid-cols-[6.5rem_1fr] items-center gap-3 transition-opacity ${
+            className={`grid grid-cols-[5.5rem_1fr] sm:grid-cols-[6.5rem_1fr] items-center gap-3 transition-opacity ${
               hovered && hovered !== j.name ? 'opacity-45' : 'opacity-100'
             }`}
             title={`${j.name}: ${j.solved} problems solved`}
           >
             <span className="truncate text-[0.92rem]">{j.name}</span>
-            <span className="flex items-center gap-2">
+            <span className="flex min-w-0 items-center gap-2">
               <span
-                className="h-3 rounded-r-[4px] bg-accent"
-                style={{ width: `${(j.solved / max) * 82}%` }}
+                className="h-3 rounded-r-[4px] bg-accent transition-all duration-300"
+                style={{ width: `${Math.max(4, (j.solved / max) * 78)}%` }}
               />
-              <span className="text-[0.88rem] tabular-nums text-muted">{j.solved}</span>
+              <span className="shrink-0 text-[0.88rem] tabular-nums text-muted">{j.solved}</span>
             </span>
           </li>
         ))}
@@ -58,7 +58,7 @@ function SolvedChart({ judges }: { judges: JudgeProfile[] }) {
           ))}
         </tbody>
       </table>
-      <figcaption className="mt-4 flex flex-wrap gap-x-4 gap-y-1 text-[0.88rem] text-muted">
+      <figcaption className="mt-4 flex flex-wrap gap-x-4 gap-y-1.5 text-[0.88rem] text-muted">
         Profiles:
         {sorted.map((j) => (
           <a key={j.name} href={j.url} target="_blank" rel="noreferrer" className="underline underline-offset-4 hover:text-accent">

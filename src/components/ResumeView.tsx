@@ -38,14 +38,14 @@ export function ResumeView({ portfolio, years, onClose }: ResumeViewProps) {
       role="dialog"
       aria-modal="true"
       aria-labelledby="resume-title"
-      className="fixed inset-0 z-50 overflow-y-auto overflow-x-hidden bg-black/60 p-3 backdrop-blur-sm sm:p-8"
+      className="fixed inset-0 z-50 overflow-y-auto overflow-x-hidden bg-black/60 p-2 sm:p-6 md:p-8 backdrop-blur-sm"
       onClick={(e) => e.target === e.currentTarget && onClose()}
     >
       <div className="resume-toolbar sticky top-0 z-10 mx-auto mb-3 flex max-w-[52rem] items-center justify-end gap-2">
         <button
           type="button"
           onClick={() => window.print()}
-          className="inline-flex items-center gap-2 rounded-lg bg-accent px-4 py-2 text-sm font-medium text-accent-ink shadow-lg"
+          className="inline-flex items-center gap-1.5 rounded-lg bg-accent px-3 py-1.5 text-xs font-medium text-accent-ink shadow-lg sm:px-4 sm:py-2 sm:text-sm"
         >
           <Printer className="h-4 w-4" aria-hidden="true" />
           Print or save as PDF
@@ -54,29 +54,29 @@ export function ResumeView({ portfolio, years, onClose }: ResumeViewProps) {
           ref={closeRef}
           type="button"
           onClick={onClose}
-          className="inline-flex items-center gap-2 rounded-lg bg-surface px-4 py-2 text-sm font-medium text-ink shadow-lg"
+          className="inline-flex items-center gap-1.5 rounded-lg bg-surface px-3 py-1.5 text-xs font-medium text-ink shadow-lg sm:px-4 sm:py-2 sm:text-sm"
         >
           <X className="h-4 w-4" aria-hidden="true" />
           Close
         </button>
       </div>
 
-      <article className="resume-sheet mx-auto max-w-[52rem] break-words rounded-xl border border-line bg-surface px-6 py-8 text-[0.92rem] leading-normal text-ink shadow-2xl sm:px-12 sm:py-12">
+      <article className="resume-sheet mx-auto max-w-[52rem] break-words rounded-xl border border-line bg-surface px-4 py-6 text-[0.88rem] leading-normal text-ink shadow-2xl sm:px-8 sm:py-10 sm:text-[0.92rem] md:px-12 md:py-12">
         <header>
-          <h1 id="resume-title" className="text-3xl font-extrabold">
+          <h1 id="resume-title" className="text-2xl font-extrabold sm:text-3xl">
             {profile.name}
           </h1>
           <p className="mt-1 font-medium">Technical Lead, Full-Stack Software Engineer, .NET and Azure</p>
-          <ul className="mt-2 flex flex-wrap gap-x-5 gap-y-1 text-muted">
+          <ul className="mt-2 flex flex-wrap gap-x-5 gap-y-1 text-xs sm:text-[0.9rem] text-muted">
             <li>{profile.location}</li>
             <li>
-              <a href={`mailto:${profile.email}`}>{profile.email}</a>
+              <a href={`mailto:${profile.email}`} className="break-all">{profile.email}</a>
             </li>
             <li>
-              <a href={profile.linkedinUrl}>{profile.linkedinUrl.replace(/^https:\/\/(www\.)?/, '').replace(/\/$/, '')}</a>
+              <a href={profile.linkedinUrl} className="break-all">{profile.linkedinUrl.replace(/^https:\/\/(www\.)?/, '').replace(/\/$/, '')}</a>
             </li>
             <li>
-              <a href={profile.githubUrl}>{profile.githubUrl.replace(/^https:\/\//, '')}</a>
+              <a href={profile.githubUrl} className="break-all">{profile.githubUrl.replace(/^https:\/\//, '')}</a>
             </li>
           </ul>
         </header>

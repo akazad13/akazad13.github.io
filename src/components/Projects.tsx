@@ -45,7 +45,7 @@ export function Projects({ projects }: { projects: Project[] }) {
       icon={LayoutGrid}
       intro="Side projects where I try architecture ideas end to end. All open source."
     >
-      <div role="group" aria-label="Filter projects" className="-mx-1 mb-10 flex flex-wrap gap-2">
+      <div role="group" aria-label="Filter projects" className="-mx-1 mb-8 sm:mb-10 flex flex-wrap gap-2">
         {filters.map((f) => {
           const count = f.id === 'all' ? projects.length : projects.filter((p) => p.kind === f.id).length;
           const selected = filter === f.id;
@@ -56,7 +56,7 @@ export function Projects({ projects }: { projects: Project[] }) {
               type="button"
               aria-pressed={selected}
               onClick={() => setFilter(f.id)}
-              className={`inline-flex items-center gap-1.5 rounded-full border px-3.5 py-1.5 text-[0.9rem] transition-colors ${
+              className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 sm:px-3.5 text-[0.88rem] sm:text-[0.9rem] transition-colors ${
                 selected ? 'border-ink bg-ink text-bg' : 'border-line text-muted hover:border-ink/30 hover:text-ink'
               }`}
             >
@@ -71,7 +71,7 @@ export function Projects({ projects }: { projects: Project[] }) {
       {featured.length > 0 && (
         <div className="grid gap-5 sm:grid-cols-2">
           {featured.map((p) => (
-            <article key={p.name} className="flex flex-col rounded-2xl border border-line bg-surface p-6">
+            <article key={p.name} className="flex flex-col rounded-2xl border border-line bg-surface p-5 sm:p-6">
               <div className="flex items-center gap-3">
                 <IconTile name={p.kind} />
                 <h3 className="text-xl font-bold">{p.name}</h3>

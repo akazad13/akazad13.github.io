@@ -30,12 +30,12 @@ export function Experience({ employers, years }: { employers: Employer[]; years:
           <CareerPath roles={employer.roles} />
 
           {/* Roles are a real sequence, so they sit on a timeline, newest first. */}
-          <ol className="relative space-y-12 border-l border-line pl-7 sm:pl-9">
+          <ol className="relative space-y-10 sm:space-y-12 border-l border-line pl-6 sm:pl-9">
             {employer.roles.map((role) => (
               <li key={role.title} className="relative">
                 <span
                   aria-hidden="true"
-                  className={`absolute top-2 -left-[calc(1.75rem+5px)] h-[9px] w-[9px] rounded-full ring-4 ring-bg sm:-left-[calc(2.25rem+5px)] ${
+                  className={`absolute top-2 -left-[calc(1.5rem+5px)] h-[9px] w-[9px] rounded-full ring-4 ring-bg sm:-left-[calc(2.25rem+5px)] ${
                     role.current ? 'bg-signal' : 'bg-muted'
                   }`}
                 />
