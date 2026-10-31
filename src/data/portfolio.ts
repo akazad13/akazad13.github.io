@@ -109,14 +109,14 @@ export const portfolio: Portfolio = {
 
   projects: [
     {
-      name: 'Keystone',
-      kind: 'architecture',
+      name: 'Shopizy storefront',
+      kind: 'product',
       featured: true,
-      summary:
-        'Reference architecture for a secure web platform: a Backend for Frontend with OpenID Connect through Zitadel, internal token exchange, and Aspire orchestration, deployed to Azure Container Apps.',
-      why: 'The same identity stack I design with at work, built in the open.',
-      tech: ['.NET 10', 'YARP', 'Zitadel', 'Aspire', 'Redis', 'OpenTelemetry', 'React'],
-      repoUrl: 'https://github.com/akazad13/keystone',
+      summary: 'Customer storefront for the Shopizy API, built with standalone Angular components.',
+      why: 'Modern client consuming the Shopizy services with standalone components and responsive design.',
+      tech: ['Angular 21', 'TypeScript', 'Tailwind CSS'],
+      repoUrl: 'https://github.com/akazad13/shopizy-spa',
+      liveUrl: 'https://shopizy.netlify.app',
     },
     {
       name: 'Shopizy microservices',
@@ -127,6 +127,16 @@ export const portfolio: Portfolio = {
       why: 'Shows how I draw service boundaries and handle events between them.',
       tech: ['.NET 10', 'C# 14', 'DDD', 'Dapr', 'RabbitMQ', 'Aspire'],
       repoUrl: 'https://github.com/akazad13/shopizy-microservice',
+    },
+    {
+      name: 'Keystone',
+      kind: 'architecture',
+      featured: true,
+      summary:
+        'Reference architecture for a secure web platform: a Backend for Frontend with OpenID Connect through Zitadel, internal token exchange, and Aspire orchestration, deployed to Azure Container Apps.',
+      why: 'The same identity stack I design with at work, built in the open.',
+      tech: ['.NET 10', 'YARP', 'Zitadel', 'Aspire', 'Redis', 'OpenTelemetry', 'React'],
+      repoUrl: 'https://github.com/akazad13/keystone',
     },
     {
       name: 'Order Flow',
@@ -148,12 +158,11 @@ export const portfolio: Portfolio = {
       liveLabel: 'API docs',
     },
     {
-      name: 'Shopizy storefront',
-      kind: 'product',
-      summary: 'Customer storefront for the Shopizy API, built with standalone Angular components.',
-      tech: ['Angular 21', 'TypeScript', 'Tailwind CSS'],
-      repoUrl: 'https://github.com/akazad13/shopizy-spa',
-      liveUrl: 'https://shopizy.netlify.app',
+      name: 'SDLC workflow automation',
+      kind: 'toolkit',
+      summary: 'Agent workflow toolkit that turns a product spec into code, unit to end-to-end tests, and a reviewed pull request.',
+      tech: ['Python', 'AI agents', 'GitHub Actions'],
+      repoUrl: 'https://github.com/akazad13/sdlc-workflow-automate',
     },
     {
       name: 'Adda',
@@ -162,13 +171,6 @@ export const portfolio: Portfolio = {
       tech: ['Angular 21', 'ASP.NET Core 10', 'Identity', 'MySQL'],
       repoUrl: 'https://github.com/akazad13/adda',
       liveUrl: 'https://addaa.alwaysdata.net',
-    },
-    {
-      name: 'SDLC workflow automation',
-      kind: 'toolkit',
-      summary: 'Agent workflow toolkit that turns a product spec into code, unit to end-to-end tests, and a reviewed pull request.',
-      tech: ['Python', 'AI agents', 'GitHub Actions'],
-      repoUrl: 'https://github.com/akazad13/sdlc-workflow-automate',
     },
   ],
 
