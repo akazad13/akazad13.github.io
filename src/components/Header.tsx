@@ -64,7 +64,7 @@ export function Header({ name, nav, active, theme, onToggleTheme, onOpenResume }
         </a>
 
         <nav aria-label="Sections" className="hidden lg:block">
-          <ul className="flex items-center gap-1">
+          <ul className="flex items-center gap-0.5 xl:gap-1">
             {nav.map((item) => {
               const isActive = active === item.id;
               return (
@@ -72,14 +72,14 @@ export function Header({ name, nav, active, theme, onToggleTheme, onOpenResume }
                   <a
                     href={`#${item.id}`}
                     aria-current={isActive ? 'true' : undefined}
-                    className={`relative rounded-md px-3 py-2 text-[0.92rem] transition-colors ${
+                    className={`relative rounded-md px-2 py-1.5 text-[0.84rem] xl:px-3 xl:py-2 xl:text-[0.92rem] transition-colors ${
                       isActive ? 'font-medium text-ink' : 'text-muted hover:text-ink'
                     }`}
                   >
                     {item.label}
                     <span
                       aria-hidden="true"
-                      className={`absolute inset-x-3 -bottom-0.5 h-0.5 rounded-full bg-accent transition-opacity ${
+                      className={`absolute inset-x-2 xl:inset-x-3 -bottom-0.5 h-0.5 rounded-full bg-accent transition-opacity ${
                         isActive ? 'opacity-100' : 'opacity-0'
                       }`}
                     />
@@ -110,13 +110,13 @@ export function Header({ name, nav, active, theme, onToggleTheme, onOpenResume }
           </button>
           <button
             type="button"
-            onClick={() => setMenuOpen((open) => !open)}
-            className={`${iconButton} lg:hidden`}
+            onClick={() => setMenuOpen((o) => !o)}
+            className={`lg:hidden ${iconButton}`}
             aria-expanded={menuOpen}
             aria-controls="mobile-menu"
             aria-label={menuOpen ? 'Close menu' : 'Open menu'}
           >
-            {menuOpen ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
+            {menuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
         </div>
       </div>

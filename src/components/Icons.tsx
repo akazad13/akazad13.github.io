@@ -6,14 +6,19 @@ import {
   Cloud,
   CreditCard,
   Database,
+  Gauge,
   GitPullRequest,
   HeartPulse,
   KeyRound,
   LucideIcon,
   PanelsTopLeft,
   Server,
+  ShieldCheck,
+  Sparkles,
   Users,
+  Workflow,
   Wrench,
+  Zap,
 } from 'lucide-react';
 
 /** Icons the data file can refer to by name, so content stays free of React imports. */
@@ -32,6 +37,11 @@ export const iconRegistry = {
   architecture: Boxes,
   product: AppWindow,
   toolkit: Wrench,
+  shield: ShieldCheck,
+  zap: Zap,
+  workflow: Workflow,
+  gauge: Gauge,
+  sparkles: Sparkles,
 } satisfies Record<string, LucideIcon>;
 
 export type IconName = keyof typeof iconRegistry;

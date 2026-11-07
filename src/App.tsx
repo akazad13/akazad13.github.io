@@ -4,7 +4,10 @@ import { useActiveSection } from './hooks/useActiveSection';
 import { useTheme } from './hooks/useTheme';
 import { Header, NavItem } from './components/Header';
 import { Hero } from './components/Hero';
+import { ImpactMetrics } from './components/ImpactMetrics';
 import { Experience } from './components/Experience';
+import { Architecture } from './components/Architecture';
+import { Leadership } from './components/Leadership';
 import { Projects } from './components/Projects';
 import { Skills } from './components/Skills';
 import { Writing } from './components/Writing';
@@ -15,6 +18,8 @@ import { ResumeView } from './components/ResumeView';
 
 const nav: NavItem[] = [
   { id: 'experience', label: 'Experience' },
+  { id: 'architecture', label: 'Architecture' },
+  { id: 'leadership', label: 'Leadership' },
   { id: 'projects', label: 'Projects' },
   { id: 'skills', label: 'Skills' },
   { id: 'writing', label: 'Writing' },
@@ -75,7 +80,10 @@ export default function App() {
         />
         <main id="main">
           <Hero profile={portfolio.profile} years={years} onOpenResume={openResume} />
+          <ImpactMetrics metrics={portfolio.impactMetrics} />
           <Experience employers={portfolio.experience} years={years} />
+          <Architecture studies={portfolio.architectureStudies} />
+          <Leadership pillars={portfolio.leadershipPillars} />
           <Projects projects={portfolio.projects} />
           <Skills groups={portfolio.skills} />
           <Writing writing={portfolio.writing} />
@@ -89,4 +97,3 @@ export default function App() {
     </>
   );
 }
-

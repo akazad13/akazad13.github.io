@@ -15,7 +15,6 @@ const paymentsWork = NAME_CLIENT
   ? 'Planet DDS Pay, Stripe-based embedded payments'
   : 'Stripe-based embedded payments';
 
-
 export const portfolio: Portfolio = {
   profile: {
     name: 'Md Abul Kalam',
@@ -42,6 +41,230 @@ export const portfolio: Portfolio = {
       { icon: 'ai', text: 'Building AI-assisted delivery workflows where engineers own every merge' },
     ],
   },
+
+  impactMetrics: [
+    {
+      value: '7+ Devs',
+      label: 'Team Leadership',
+      detail: 'Mentoring, sprint estimation, code reviews, and quality gates',
+      icon: 'team',
+    },
+    {
+      value: '8+ Years',
+      label: 'Production Cloud Systems',
+      detail: 'Enterprise .NET, Azure microservices, and distributed architecture',
+      icon: 'backend',
+    },
+    {
+      value: '99.9%',
+      label: 'Service Uptime SLA',
+      detail: 'High-availability multi-tenant healthcare SaaS and mission-critical APIs',
+      icon: 'zap',
+    },
+    {
+      value: 'HIPAA',
+      label: 'Compliant Delivery',
+      detail: 'Audit trails, sensitive health data protection, and secure payments',
+      icon: 'shield',
+    },
+  ],
+
+  architectureStudies: [
+    {
+      id: 'stripe-payments',
+      title: 'Multi-Tenant Embedded Payments & Ledgering',
+      subtitle: 'Distributed payment reconciliation across independent dental practices',
+      domain: 'FinTech / Dental Practice Management',
+      challenge:
+        'Coordinate credit card and terminal payments across hundreds of independent clinics. Required zero double-charging, strict idempotency, resilient webhook consumption during network blips, and exact ledger reconciliation.',
+      solution:
+        'Engineered an event-driven architecture using the Transactional Outbox pattern with ASP.NET Core and PostgreSQL. Incoming Stripe webhooks are verified and queued into Azure Service Bus, where idempotent consumers process transactions without distributed locks.',
+      flowSteps: [
+        {
+          step: 1,
+          title: 'Terminal / Web Checkout',
+          description: 'Client application initiates a payment intent scoped to clinic tenant via Zitadel OIDC.',
+          tech: 'React · Zitadel OIDC',
+        },
+        {
+          step: 2,
+          title: 'Transactional Outbox Write',
+          description: 'ASP.NET Core API persists the pending ledger entry and outbox message in a single database transaction.',
+          tech: 'ASP.NET Core · EF Core · PostgreSQL',
+        },
+        {
+          step: 3,
+          title: 'Async Event Publishing',
+          description: 'A background worker relays outbox records to an Azure Service Bus topic for decoupled fan-out.',
+          tech: 'Azure Service Bus · AMQP',
+        },
+        {
+          step: 4,
+          title: 'Idempotent Webhook Processing',
+          description: 'Stripe webhook listener validates cryptographically signed payloads and safely reconciles the clinic balance.',
+          tech: 'Stripe API · Redis Idempotency Key',
+        },
+      ],
+      tradeoffs: [
+        {
+          decision: 'Transactional Outbox over Two-Phase Commit (2PC)',
+          rationale:
+            'Avoided distributed locking across external Stripe APIs and internal databases; guarantees at-least-once delivery with zero clinical disruption.',
+        },
+        {
+          decision: 'Dapper for Read Reconciliation vs EF Core for Writes',
+          rationale:
+            'Utilized EF Core for rich domain validation during writes, while high-throughput end-of-day financial reconciliation runs on optimized Dapper queries.',
+        },
+      ],
+      tech: ['C#', 'ASP.NET Core', 'PostgreSQL', 'EF Core', 'Stripe API', 'Azure Service Bus', 'Redis', 'Zitadel'],
+    },
+    {
+      id: 'azure-migration',
+      title: 'Healthcare SaaS Monolith to Azure Cloud Migration',
+      subtitle: 'Phased modernization with zero clinical downtime',
+      domain: 'Enterprise Cloud Modernization',
+      challenge:
+        'Modernize large monolithic dental practice management workloads running on on-premises Windows servers into a modern, scalable Azure cloud environment without interrupting daily clinic appointments or risking patient records.',
+      solution:
+        'Implemented the Strangler Fig migration pattern. Containerized core services into Azure Container Apps and App Services behind Azure Application Gateway, with real-time database replication and Redis distributed caching.',
+      flowSteps: [
+        {
+          step: 1,
+          title: 'Edge Routing & WAF',
+          description: 'Azure Front Door and Application Gateway route traffic dynamically based on domain route rules.',
+          tech: 'Azure Front Door · WAF',
+        },
+        {
+          step: 2,
+          title: 'Strangler Fig Extraction',
+          description: 'Targeted subdomains (scheduling, patient messaging, billing) broken out into independent microservices.',
+          tech: 'Azure Container Apps · Docker',
+        },
+        {
+          step: 3,
+          title: 'Distributed Caching Layer',
+          description: 'Redis cache absorbs recurring clinic read surges, cutting database load by 60%.',
+          tech: 'Azure Cache for Redis',
+        },
+        {
+          step: 4,
+          title: 'Managed PostgreSQL & Key Vault',
+          description: 'Centralized secret management and automated failover database instances with point-in-time recovery.',
+          tech: 'Azure Database for PostgreSQL · Key Vault',
+        },
+      ],
+      tradeoffs: [
+        {
+          decision: 'Azure Container Apps over Kubernetes (AKS)',
+          rationale:
+            'Drastically lowered operational overhead and maintenance cost for a 7-person team while retaining microservice scaling and Dapr support.',
+        },
+        {
+          decision: 'Phased Database Cutover with CDC',
+          rationale:
+            'Dual-write and continuous synchronization allowed emergency rollback with zero clinical data loss.',
+        },
+      ],
+      tech: ['Azure Container Apps', 'App Service', 'PostgreSQL', 'Redis', 'Docker', 'Azure DevOps', 'SonarQube'],
+    },
+    {
+      id: 'clinical-alerts',
+      title: 'Real-Time Clinical Communication & Alerting Platform',
+      subtitle: 'Sub-second emergency messaging with automated SMS failover',
+      domain: 'Urgent Care & Clinical Collaboration',
+      challenge:
+        'Medical and dental staff require instant, bi-directional communication between operatories and front desk. If an emergency alert is not acknowledged on screen within 60 seconds, it must automatically escalate to SMS/voice without race conditions.',
+      solution:
+        'Built a real-time messaging hub using ASP.NET Core SignalR with a Redis backplane for horizontal scale. A scheduled background evaluator watches for unread urgent alerts and triggers Twilio delivery pipelines.',
+      flowSteps: [
+        {
+          step: 1,
+          title: 'WebSocket Connection',
+          description: 'Desktop and tablet clients maintain persistent WebSocket channels to ASP.NET Core SignalR.',
+          tech: 'React · WebSockets · SignalR',
+        },
+        {
+          step: 2,
+          title: 'Redis Backplane Fan-Out',
+          description: 'Messages broadcast instantly across multi-instance App Service nodes without sticky sessions.',
+          tech: 'Redis Pub/Sub Backplane',
+        },
+        {
+          step: 3,
+          title: 'Low-Latency Feed Storage',
+          description: 'Conversation threads stored in Cosmos DB partitioned by clinic ID for predictable sub-10ms response.',
+          tech: 'Azure Cosmos DB · Partition Keys',
+        },
+        {
+          step: 4,
+          title: 'Escalation Pipeline',
+          description: 'Azure Service Bus delayed messages trigger Twilio SMS if urgent clinical notifications are not acknowledged.',
+          tech: 'Azure Service Bus · Twilio API',
+        },
+      ],
+      tradeoffs: [
+        {
+          decision: 'SignalR + Redis over Client Polling',
+          rationale:
+            'Reduced server load by 85% and achieved sub-150ms operatory notification latency.',
+        },
+        {
+          decision: 'Cosmos DB Partitioning by Clinic',
+          rationale:
+            'Isolated multi-tenant traffic and guaranteed constant-time reads regardless of overall platform growth.',
+        },
+      ],
+      tech: ['ASP.NET Core', 'SignalR', 'Redis', 'Twilio', 'Cosmos DB', 'Azure Service Bus', 'React'],
+    },
+  ],
+
+  leadershipPillars: [
+    {
+      title: 'Pragmatic Architecture & Trade-Offs',
+      summary:
+        'Architecture is about managing constraints, not chasing hype. I choose battle-tested technologies for core transactional paths while selectively adopting cloud-native innovations where scale delivers real business value.',
+      details: [
+        'Favors proven relational databases and outbox patterns for financial and clinical records.',
+        'Adopted Azure Container Apps to gain microservice flexibility without Kubernetes cluster management overhead.',
+        'Structures solutions using Clean and Onion architecture to keep domain business logic decoupled from cloud frameworks.',
+      ],
+      icon: 'architecture',
+    },
+    {
+      title: 'Quality as a Living Culture',
+      summary:
+        'Automate what machines do best so engineers can focus on creative problem-solving. I institute automated quality bars so code review discussions center on design, security, and mentorship rather than syntax.',
+      details: [
+        'Enforced SonarQube quality gates across CI/CD pipelines to catch vulnerabilities and technical debt before merge.',
+        'Introduced Testcontainers and automated integration tests for real database & message bus verification.',
+        'Set up reproducible coding standards and documentation so new team members onboard in days, not weeks.',
+      ],
+      icon: 'shield',
+    },
+    {
+      title: 'Developer Velocity & Tooling',
+      summary:
+        'Great technical leads eliminate friction. I actively identify bottlenecks in local development and build tools that give developers hours back every week.',
+      details: [
+        'Built an automated single-step DML tool that updates local database environments from multi-file migrations.',
+        'Engineered a charting diagnostic tool that helps developers and support staff isolate production data defects in minutes.',
+        'Piloted agent-driven delivery workflows (Claude Code with Azure DevOps & Linear) where engineers retain full review ownership.',
+      ],
+      icon: 'workflow',
+    },
+    {
+      title: 'Empathetic Mentorship & Growth',
+      summary:
+        'Leading seven developers means growing engineers into confident problem solvers. I cultivate psychological safety where technical questions are welcomed and blameless post-mortems drive improvement.',
+      details: [
+        'Mentors junior and mid-level engineers through complex sprint estimation, task slicing, and architectural trade-offs.',
+        'Conducts constructive, coaching-oriented code reviews that explain the "why" behind recommendations.',
+        'Fosters strong team alignment with US client architects and product managers through clear, proactive communication.',
+      ],
+      icon: 'team',
+    },
+  ],
 
   experience: [
     {

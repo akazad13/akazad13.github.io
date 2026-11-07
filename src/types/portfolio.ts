@@ -153,7 +153,7 @@ export interface PortfolioData {
 }
 
 // ===================================================
-// LEGACY types (used by old portfolio components)
+// Core Portfolio Types
 // ===================================================
 import type { IconName } from '../components/Icons';
 
@@ -263,8 +263,52 @@ export interface JudgeProfile {
   url: string;
 }
 
+// Executive Impact & Scale Metrics
+export interface ImpactMetric {
+  value: string;
+  label: string;
+  detail: string;
+  icon: IconName;
+}
+
+// Interactive Architecture Case Studies
+export interface ArchitectureFlowStep {
+  step: number;
+  title: string;
+  description: string;
+  tech: string;
+}
+
+export interface ArchitectureTradeoff {
+  decision: string;
+  rationale: string;
+}
+
+export interface ArchitectureCaseStudy {
+  id: string;
+  title: string;
+  subtitle: string;
+  domain: string;
+  challenge: string;
+  solution: string;
+  flowSteps: ArchitectureFlowStep[];
+  tradeoffs: ArchitectureTradeoff[];
+  tech: string[];
+}
+
+// Engineering Leadership Pillars
+export interface LeadershipPillar {
+  title: string;
+  summary: string;
+  details: string[];
+  icon: IconName;
+}
+
 export interface Portfolio {
   profile: Profile;
+  impactMetrics: ImpactMetric[];
+  architectureStudies: ArchitectureCaseStudy[];
+  leadershipPillars: LeadershipPillar[];
   experience: Employer[];
   projects: Project[];
   skills: SkillGroup[];
