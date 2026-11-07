@@ -35,6 +35,8 @@ This document provides mandatory guidance for autonomous AI coding agents (Antig
    - Keep the repository lean. Do not leave unreferenced modal or playground components in `src/components/`.
 4. **Favicon Integrity**:
    - Both `/favicon.ico` in `public/` and `public/favicons/*` must be preserved for browser caching compatibility.
+5. **Vite Client Types (ADR-0001)**:
+   - `src/vite-env.d.ts` must reference `vite/client` so CSS modules, SVG imports, and `import.meta.env` are strongly typed in Vite 8.
 
 ---
 
