@@ -18,6 +18,7 @@
 [Repository Layout](#-repository-layout) •
 [Content Customization](#-content-customization) •
 [Getting Started](#-getting-started) •
+[Testing & Verification](#-testing--verification) •
 [Author](#-author) •
 [License](#-license)
 
@@ -92,6 +93,7 @@ Key architectural choices, runtime upgrades, and engineering invariants are docu
 | :--- | :--- | :--- | :--- |
 | [**ADR-0000**](docs/adr/0000-record-architecture-decisions.md) | Record Architecture Decisions | Accepted | 2026-11-07 |
 | [**ADR-0001**](docs/adr/0001-vite8-react19-modernization.md) | Vite 8, React 19, and Tailwind v4 Modernization | Accepted | 2026-11-07 |
+| [**ADR-0002**](docs/adr/0002-testing-paradigm-and-agentic-verification.md) | Testing Paradigm and Agentic Verification | Accepted | 2026-11-07 |
 
 For complete decision contexts, lifecycle rules, and details, see the [ADR Index](docs/adr/README.md).
 
@@ -196,6 +198,23 @@ You can then refer to `'docker'` directly inside `portfolio.ts` without introduc
 | `npm run build` | Runs TypeScript type checking (`tsc --noEmit`) and compiles the static site to `dist/`. |
 | `npm run preview` | Serves the generated production build locally for verification. |
 | `npm run lint` | Runs the TypeScript compiler in no-emit mode to check for type errors. |
+
+---
+
+## 🧪 Testing & Verification
+
+Governed by [ADR-0002](docs/adr/0002-testing-paradigm-and-agentic-verification.md) and the `test-driven-development` skill, the repository implements a deterministic three-pillar testing paradigm tailored for static client architecture and autonomous agentic workflows:
+
+1. **Compile-Time Type & Schema Contracts (`npm run lint`)**:
+   - TypeScript 5.8+ validates static contracts with zero emit (`tsc --noEmit`).
+   - Ensures all data structures in `src/data/portfolio.ts` strictly conform to interfaces defined in `src/types/portfolio.ts`.
+   - Verifies component props, Lucide icon references in `src/components/Icons.tsx`, and CSS module bindings.
+2. **Build Artifact Integrity (`npm run build`)**:
+   - Runs full production bundling with Vite 8 and Tailwind CSS v4 in under 1 second (~350ms).
+   - Validates tree-shaking, production asset bundling, and relative path resolution (`base: './'`) for GitHub Pages hosting.
+3. **Visual & DOM Runtime Verification**:
+   - Runtime inspection using Chrome DevTools MCP and local preview (`npm run preview`).
+   - Guards key invariants: **zero console errors/warnings**, responsive layouts across viewports, dark/light theme switching with zero FOUC, and direct-hash `#resume` modal routing.
 
 ---
 

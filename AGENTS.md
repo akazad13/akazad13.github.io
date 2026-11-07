@@ -43,6 +43,8 @@ All architectural decisions and technical trade-offs are governed by formal Arch
    - `src/vite-env.d.ts` must reference `vite/client` so CSS modules, SVG imports, and `import.meta.env` are strongly typed in Vite 8.
 7. **Zero-Flicker Dark Mode**:
    - The inline pre-paint script in `index.html` must execute synchronously before rendering to ensure instant theme application without flashes of unstyled content (FOUC).
+8. **Testing Paradigm & Agentic Verification ([ADR-0002](docs/adr/0002-testing-paradigm-and-agentic-verification.md))**:
+   - All code changes must satisfy the three-pillar verification model: compile-time schema contracts, production build integrity, and zero-error browser runtime.
 
 ---
 
@@ -67,9 +69,24 @@ npx vite preview --port 3000
 
 ---
 
-## 4. Verification Gates for AI Agents
+## 4. Testing Paradigm & Agentic Verification
 
-Before submitting code changes or finishing a turn:
-1. Run `npm run lint` (`tsc --noEmit`) — must pass with **0 errors**.
-2. Run `npm run build` — must build within 1 second.
-3. Confirm that no secrets or API keys are added.
+In accordance with [ADR-0002](docs/adr/0002-testing-paradigm-and-agentic-verification.md) and the `test-driven-development` skill, the repository follows a three-pillar testing paradigm designed for high-velocity, deterministic agentic execution:
+
+1. **Compile-Time Type & Schema Verification**:
+   - Run `npm run lint` (`tsc --noEmit`).
+   - Ensures `src/data/portfolio.ts` conforms strictly to `src/types/portfolio.ts`.
+   - Validates component props and icon registry references in `src/components/Icons.tsx`.
+2. **Build Artifact Integrity**:
+   - Run `npm run build` (`tsc --noEmit && vite build`).
+   - Confirms production bundling, Tailwind v4 compilation, and static asset generation in `dist/` within <1s (~350ms).
+3. **Visual & DOM Runtime Verification**:
+   - Verify UI behavior via Chrome DevTools MCP or local preview (`npm run preview`).
+   - Invariants: **0 console errors/warnings**, responsive rendering across breakpoints, seamless theme switching without FOUC, and accessible `#resume` modal routing.
+
+### Mandatory Pre-Submission Gates
+Before concluding any task or committing changes:
+- [ ] `npm run lint` exits with **0 errors**.
+- [ ] `npm run build` succeeds cleanly.
+- [ ] No hardcoded data bypasses `src/types/portfolio.ts`.
+- [ ] Zero secrets or environment credentials are staged.

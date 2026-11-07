@@ -12,6 +12,7 @@ For more details on the ADR process and guidelines, refer to [ADR-0000](0000-rec
 | :--- | :--- | :--- | :--- | :--- |
 | [ADR-0000](0000-record-architecture-decisions.md) | Record Architecture Decisions | Accepted | 2026-11-07 | Process / Documentation |
 | [ADR-0001](0001-vite8-react19-modernization.md) | Vite 8, React 19, and Tailwind v4 Modernization | Accepted | 2026-11-07 | Tooling & Runtime |
+| [ADR-0002](0002-testing-paradigm-and-agentic-verification.md) | Testing Paradigm and Agentic Verification | Accepted | 2026-11-07 | Quality & Testing |
 
 ---
 
