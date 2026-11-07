@@ -26,7 +26,7 @@ export function Architecture({ studies }: ArchitectureProps) {
         <div
           role="tablist"
           aria-label="System Architecture Case Studies"
-          className="flex flex-wrap gap-2 rounded-2xl border border-line bg-surface/80 p-1.5"
+          className="grid grid-cols-1 gap-2 rounded-2xl border border-line bg-surface/80 p-1.5 sm:grid-cols-3"
         >
           {studies.map((study) => {
             const isSelected = study.id === activeStudy.id;
@@ -38,7 +38,7 @@ export function Architecture({ studies }: ArchitectureProps) {
                 aria-controls={`study-panel-${study.id}`}
                 id={`study-tab-${study.id}`}
                 onClick={() => setSelectedId(study.id)}
-                className={`flex-1 min-w-[200px] rounded-xl px-4 py-2.5 text-left text-[0.92rem] font-medium transition-all ${
+                className={`rounded-xl px-4 py-3 text-left text-[0.92rem] font-medium transition-all ${
                   isSelected
                     ? 'bg-accent text-accent-ink shadow-sm'
                     : 'text-muted hover:bg-bg hover:text-ink'
@@ -95,34 +95,42 @@ export function Architecture({ studies }: ArchitectureProps) {
             </div>
           </div>
 
-          {/* Sequential Event / Message Flow Visualizer */}
+          {/* Sequential Event / Message Flow Pipeline (Connected Vertical Pipeline) */}
           <div>
-            <div className="flex items-center gap-2 border-b border-line pb-3">
-              <Layers className="h-4 w-4 text-accent" aria-hidden="true" />
-              <h4 className="text-sm font-bold uppercase tracking-wider text-ink">
-                System Flow & Message Pipeline
-              </h4>
+            <div className="flex items-center justify-between border-b border-line pb-3">
+              <div className="flex items-center gap-2">
+                <Layers className="h-4 w-4 text-accent" aria-hidden="true" />
+                <h4 className="text-sm font-bold uppercase tracking-wider text-ink">
+                  System Flow & Message Pipeline
+                </h4>
+              </div>
+              <span className="text-xs text-muted font-medium hidden sm:inline">
+                Sequential execution flow
+              </span>
             </div>
 
-            <ol className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <ol className="relative mt-6 space-y-4 before:absolute before:left-5 before:top-4 before:bottom-4 before:w-0.5 before:bg-line sm:before:left-6">
               {activeStudy.flowSteps.map((step) => (
                 <li
                   key={step.step}
-                  className="relative flex flex-col justify-between rounded-xl border border-line bg-bg/40 p-4 transition-colors hover:border-accent/40"
+                  className="relative flex items-start gap-4 sm:gap-5"
                 >
-                  <div>
-                    <div className="flex items-center justify-between">
-                      <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-accent text-xs font-bold text-accent-ink">
-                        {step.step}
-                      </span>
-                      <span className="text-[0.75rem] font-mono font-medium text-muted">
+                  {/* Step Node */}
+                  <div className="relative z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-line bg-surface font-display text-sm font-bold text-accent shadow-xs sm:h-12 sm:w-12">
+                    {step.step}
+                  </div>
+
+                  {/* Step Content Card */}
+                  <div className="flex-1 rounded-xl border border-line bg-bg/40 p-4 transition-colors hover:border-accent/40 sm:p-5">
+                    <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+                      <h5 className="font-display text-[0.98rem] font-bold text-ink sm:text-base">
+                        {step.title}
+                      </h5>
+                      <span className="inline-flex self-start sm:self-auto items-center rounded-md bg-accent-soft px-2.5 py-1 text-xs font-mono font-medium text-accent">
                         {step.tech}
                       </span>
                     </div>
-                    <p className="mt-3 font-display text-[0.98rem] font-bold text-ink">
-                      {step.title}
-                    </p>
-                    <p className="mt-1.5 text-xs text-muted leading-relaxed">
+                    <p className="mt-2 text-[0.9rem] leading-relaxed text-muted">
                       {step.description}
                     </p>
                   </div>
@@ -142,7 +150,7 @@ export function Architecture({ studies }: ArchitectureProps) {
 
             <div className="mt-5 grid gap-4 sm:grid-cols-2">
               {activeStudy.tradeoffs.map((item, idx) => (
-                <div key={idx} className="rounded-xl border border-line bg-bg/40 p-4">
+                <div key={idx} className="rounded-xl border border-line bg-bg/40 p-4 sm:p-5">
                   <p className="font-semibold text-sm text-ink flex items-start gap-2">
                     <ChevronRight className="h-4 w-4 text-accent shrink-0 mt-0.5" aria-hidden="true" />
                     <span>{item.decision}</span>
