@@ -6,15 +6,15 @@
 
 [![React](https://img.shields.io/badge/React-19.0-61DAFB?style=flat-square&logo=react&logoColor=black)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.8-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![Vite](https://img.shields.io/badge/Vite-6.4-646CFF?style=flat-square&logo=vite&logoColor=white)](https://vite.dev/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.1-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![Vite](https://img.shields.io/badge/Vite-8.3-646CFF?style=flat-square&logo=vite&logoColor=white)](https://vite.dev/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.3-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![Live Demo](https://img.shields.io/badge/Live_Site-akazad13.github.io-success?style=flat-square&logo=githubpages&logoColor=white)](https://akazad13.github.io/)
 [![License](https://img.shields.io/badge/License-MIT-blue?style=flat-square)](LICENSE)
 
 [Overview](#-overview) •
 [Key Highlights](#-key-highlights) •
 [Site Sections](#-site-sections) •
-[Architecture](#-architecture) •
+[Architecture & Decision Records](#-architecture--decision-records) •
 [Repository Layout](#-repository-layout) •
 [Content Customization](#-content-customization) •
 [Getting Started](#-getting-started) •
@@ -69,7 +69,7 @@ The site is built as a blazing-fast, single-page application with **React 19**, 
 
 ---
 
-## 🏛 Architecture
+## 🏛 Architecture & Decision Records
 
 ```mermaid
 flowchart TD
@@ -77,12 +77,23 @@ flowchart TD
     Types --> UI["UI Components<br/>(Hero, Experience, Projects, Skills, Writing, Background)"]
     UI --> App["Single Page App<br/>(src/App.tsx)"]
     App --> ResumeModal["Printable Resume Modal<br/>(#resume route)"]
-    App --> Vite["Vite 6 + Tailwind CSS 4 Bundler"]
+    App --> Vite["Vite 8 + Tailwind CSS 4 Bundler"]
     Vite --> Dist["Static Output<br/>(dist/)"]
 ```
 
 > [!NOTE]
 > All content changes made in `src/data/portfolio.ts` propagate automatically across both the web presentation and the printable resume view.
+
+### Architecture Decision Records (ADRs)
+
+Key architectural choices, runtime upgrades, and engineering invariants are documented in accordance with the `documentation-and-adrs` practice in [`docs/adr/`](docs/adr/README.md).
+
+| ADR | Title | Status | Date |
+| :--- | :--- | :--- | :--- |
+| [**ADR-0000**](docs/adr/0000-record-architecture-decisions.md) | Record Architecture Decisions | Accepted | 2026-11-07 |
+| [**ADR-0001**](docs/adr/0001-vite8-react19-modernization.md) | Vite 8, React 19, and Tailwind v4 Modernization | Accepted | 2026-11-07 |
+
+For complete decision contexts, lifecycle rules, and details, see the [ADR Index](docs/adr/README.md).
 
 ---
 

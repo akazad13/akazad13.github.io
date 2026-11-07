@@ -25,18 +25,24 @@ This document provides mandatory guidance for autonomous AI coding agents (Antig
 
 ---
 
-## 2. Inviolable Architectural Invariants
+## 2. Architecture Decisions & Inviolable Invariants
 
-1. **Portfolio Data Decoupling**:
-   - Content and links must be edited in `src/data/portfolio.ts`. Do not hardcode custom project arrays or work experience directly in JSX components.
-2. **Base URL Relative Paths**:
+All architectural decisions and technical trade-offs are governed by formal Architecture Decision Records documented in [`docs/adr/README.md`](docs/adr/README.md).
+
+1. **Architecture Decision Recording ([ADR-0000](docs/adr/0000-record-architecture-decisions.md))**:
+   - Any architectural modifications, significant dependency changes, or structural shifts must be recorded in `docs/adr/` and indexed in `docs/adr/README.md`.
+2. **Portfolio Data Decoupling**:
+   - Content and links must be edited in `src/data/portfolio.ts`. Do not hardcode custom project arrays, work experience, or external links directly in JSX components.
+3. **Base URL Relative Paths ([ADR-0001](docs/adr/0001-vite8-react19-modernization.md))**:
    - `vite.config.ts` specifies `base: './'`. All static asset paths must remain relative or root-compatible to function seamlessly on GitHub Pages.
-3. **No Unused / Orphan Prototype Components**:
+4. **No Unused / Orphan Prototype Components**:
    - Keep the repository lean. Do not leave unreferenced modal or playground components in `src/components/`.
-4. **Favicon Integrity**:
+5. **Favicon Integrity**:
    - Both `/favicon.ico` in `public/` and `public/favicons/*` must be preserved for browser caching compatibility.
-5. **Vite Client Types (ADR-0001)**:
+6. **Vite Client Types ([ADR-0001](docs/adr/0001-vite8-react19-modernization.md))**:
    - `src/vite-env.d.ts` must reference `vite/client` so CSS modules, SVG imports, and `import.meta.env` are strongly typed in Vite 8.
+7. **Zero-Flicker Dark Mode**:
+   - The inline pre-paint script in `index.html` must execute synchronously before rendering to ensure instant theme application without flashes of unstyled content (FOUC).
 
 ---
 
